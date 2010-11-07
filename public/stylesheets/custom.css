@@ -1,4 +1,10 @@
 
+
+tbody tr:nth-child(even) td, tbody tr.even td {
+  background:#e5ec00;
+}
+
+
 /* Navigation */
 
 nav {
@@ -64,10 +70,11 @@ a.signup_button {
 }
 
 body {
-  background: #cff;
+  background: #ECE6BA;
 }
 
 header {
+  margin-top: 20px;
   padding-top: 20px;
 }
 

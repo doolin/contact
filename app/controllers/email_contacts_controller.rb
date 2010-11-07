@@ -45,6 +45,7 @@ class EmailContactsController < ApplicationController
 
     respond_to do |format|
       if @email_contact.save
+        ContactMailer.welcome_email(@email_contact).deliver
         format.html { redirect_to(@email_contact, :notice => 'Email contact was successfully created.') }
         format.xml  { render :xml => @email_contact, :status => :created, :location => @email_contact }
       else
