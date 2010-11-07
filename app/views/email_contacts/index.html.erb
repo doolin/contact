@@ -1,0 +1,27 @@
+<h1>Listing email_contacts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @email_contacts.each do |email_contact| %>
+  <tr>
+    <td><%= email_contact.name %></td>
+    <td><%= email_contact.email %></td>
+    <td><%= email_contact.message %></td>
+    <td><%= link_to 'Show', email_contact %></td>
+    <td><%= link_to 'Edit', edit_email_contact_path(email_contact) %></td>
+    <td><%= link_to 'Destroy', email_contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Email contact', new_email_contact_path %>
