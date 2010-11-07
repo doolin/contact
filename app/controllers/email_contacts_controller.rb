@@ -1,4 +1,5 @@
 class EmailContactsController < ApplicationController
+
   # GET /email_contacts
   # GET /email_contacts.xml
   def index

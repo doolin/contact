@@ -1,6 +1,8 @@
 Contact::Application.routes.draw do
   resources :email_contacts
 
+  root :to => 'email_contacts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
