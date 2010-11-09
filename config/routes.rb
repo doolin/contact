@@ -1,7 +1,15 @@
 Contact::Application.routes.draw do
-  resources :email_contacts
+  get "contacter/index"
 
-  root :to => 'email_contacts#index'
+  get "contacter/thankyou"
+
+  get "contacter/about"
+
+  resources :email_contacts
+  
+  match "thankyou", :to => 'email_contacts#thankyou'
+
+  root :to => 'email_contacts#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
