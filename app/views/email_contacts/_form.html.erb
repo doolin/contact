@@ -1,3 +1,8 @@
+
+<div class="contactform span-11">
+
+  <h2>New email_contact</h2>
+  
 <%= form_for(@email_contact) do |f| %>
   <% if @email_contact.errors.any? %>
     <div id="error_explanation">
@@ -21,9 +26,10 @@
   </div>
   <div class="field">
     <%= f.label :message %><br />
-    <%= f.text_field :message %>
+    <%= f.text_area :message %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => "Send it!"%>
   </div>
 <% end %>
+</div>

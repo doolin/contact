@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe EmailContactsController do
 
+=begin
   def mock_email_contact(stubs={})
     (@mock_email_contact ||= mock_model(EmailContact).as_null_object).tap do |email_contact|
       email_contact.stub(stubs) unless stubs.empty?
@@ -123,5 +124,5 @@ describe EmailContactsController do
       response.should redirect_to(email_contacts_url)
     end
   end
-
+=end
 end

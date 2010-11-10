@@ -74,6 +74,9 @@ class EmailContactsController < ApplicationController
     end
   end
 
+#  def thankyou
+#  end
+
   # DELETE /email_contacts/1
   # DELETE /email_contacts/1.xml
   def destroy

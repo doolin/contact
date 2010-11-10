@@ -1,11 +1,8 @@
 Contact::Application.routes.draw do
-  get "contacter/index"
-
-  get "contacter/thankyou"
-
-  get "contacter/about"
 
   resources :email_contacts
+  
+  get "email_contacts/thankyou"
   
   match "thankyou", :to => 'email_contacts#thankyou'
 
