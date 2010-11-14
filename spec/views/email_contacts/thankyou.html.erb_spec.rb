@@ -1,12 +1,18 @@
 require 'spec_helper'
 
-describe "email_contacts/thankyou.html.erb" do
 
-#=begin
+# This is messed up, it's not finding the template,
+# going to deep into the stack otherwise.
+#describe "email_contacts/thankyou.html.erb" do
+describe "Get 'thankyou'" do
+
   it "should have 'Thanks'" do
-    get '/thankyou'
-    response.should have_selector("p", :href => "/thankyou", :content => "Thanks")
+    # Solves the stack too deep issue
+    render
+    #puts thankyou_path
+    get :thankyou
+    response.should have_selector("p", :content => "Thanks")
   end
-#=end
+
 
 end

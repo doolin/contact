@@ -36,6 +36,11 @@ module Contact
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
+# From http://www.ruby-forum.com/topic/184533
+# Trying to fix a "stack too deep" issue
+#config.cache_classes = false
+#config.cache_classes = true
+
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
   end

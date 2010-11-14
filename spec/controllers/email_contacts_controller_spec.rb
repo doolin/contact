@@ -1,8 +1,21 @@
 require 'spec_helper'
 
+
+
 describe EmailContactsController do
 
-=begin
+render_views
+
+  describe "GET thankyou" do
+    it "should have Thanks in the response" do
+      get :thankyou
+      response.should have_selector("p", :content => "Thanks")
+    end
+  end
+
+
+
+
   def mock_email_contact(stubs={})
     (@mock_email_contact ||= mock_model(EmailContact).as_null_object).tap do |email_contact|
       email_contact.stub(stubs) unless stubs.empty?
@@ -17,6 +30,8 @@ describe EmailContactsController do
     end
   end
 
+
+
   describe "GET show" do
     it "assigns the requested email_contact as @email_contact" do
       EmailContact.stub(:find).with("37") { mock_email_contact }
@@ -24,6 +39,8 @@ describe EmailContactsController do
       assigns(:email_contact).should be(mock_email_contact)
     end
   end
+
+
 
   describe "GET new" do
     it "assigns a new email_contact as @email_contact" do
@@ -41,6 +58,7 @@ describe EmailContactsController do
     end
   end
 
+=begin
   describe "POST create" do
 
     describe "with valid params" do
@@ -50,11 +68,14 @@ describe EmailContactsController do
         assigns(:email_contact).should be(mock_email_contact)
       end
 
+
+
       it "redirects to the created email_contact" do
         EmailContact.stub(:new) { mock_email_contact(:save => true) }
         post :create, :email_contact => {}
         response.should redirect_to(email_contact_url(mock_email_contact))
       end
+
     end
 
     describe "with invalid params" do
@@ -72,6 +93,7 @@ describe EmailContactsController do
     end
 
   end
+
 
   describe "PUT update" do
 
