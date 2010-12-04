@@ -1,6 +1,7 @@
 Contact::Application.routes.draw do
 
   resources :email_contacts
+  resources :users
   
   #get "email_contacts/thankyou"
   

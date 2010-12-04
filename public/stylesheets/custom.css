@@ -259,3 +259,5 @@ form.new_micropost textarea {
   margin-bottom: 0;
 }
 
+
+div#user_nav { float: right; font-size: 0.9em; }
