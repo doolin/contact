@@ -3,7 +3,13 @@ Feature: Send Dave an email
   and press the Send button.
 
   Scenario: Send Dave an email
-    Given there's a message sending form
-    When the user sends a message
-    Then I should get email
+    Given there's a message sending form web page
+    And I fill in the "Name" field
+    And I fill in the "Email Address" field
+    And I fill in the "Subject" field
+    And I fill in the "Message" field
+    When I press "Send"
+    Then Dave should get my email
+    And I should see the "About" page
+
 
