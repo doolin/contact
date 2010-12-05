@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jquery-rails', '0.2.5'
-gem 'authlogic'
 gem 'dynamic_form'
 
 group :cucumber do
