@@ -1,7 +1,7 @@
 Feature: Admin manages emails
 
   Scenario: Admin logs on
-    Given I open the login page
+    Given I am on login
     And I fill in "Name" with "Admin"
     And I fill in the "Password" with "frobnosticate"
     When I press "Login" 
