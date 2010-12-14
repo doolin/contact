@@ -3,6 +3,13 @@
 
 
 <%= link_to 'New email message', new_email_contact_path %>
+<% if admin_signed_in? %>
 |
 <%= link_to 'List', email_contacts_path %>
+|
+<%= link_to 'Logout', logout_path %>
+<% else %>
+|
+<%= link_to 'Login', login_path %>
+<% end %>
 </footer>

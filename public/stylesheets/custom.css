@@ -1,5 +1,73 @@
 
 
+/**
+ *   BODY
+ */
+/*
+body {
+  background: #ECE6BA;
+}
+*/
+body {
+  background-image: url("/images/bg.jpg");
+}
+
+.container {
+  margin-top: 20px;
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #777;
+}
+
+.container {
+  width: 710px;
+  padding: 0px 15px;
+}
+
+
+/**
+ *   HEADER
+ */
+header {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+header h1 {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-family: "lobster-1","lobster-2"; 
+}
+
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+/**
+ *   SECTION MASTER
+ */
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+.contactform h2 {
+  font-family: "lobster-1","lobster-2";
+}
+
+.sidebar h2 {
+  font-family: "lobster-1","lobster-2";
+}
+
 tbody tr:nth-child(even) td, tbody tr.even td {
   background:#e5ec00;
 }
@@ -65,37 +133,10 @@ a.signup_button {
   border-radius:         10px;
 }
 
-.container {
-  width: 710px;
-  padding: 0px 15px;
-}
 
-body {
-  background: #ECE6BA;
-}
-
-header {
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
-header img {
-  padding: 1em;
-  background: #fff;
-}
-
-section {
-  margin-top: 1em;
-  font-size: 120%;
-  padding: 20px;
-  background: #fff;
-}
-
-section h1 {
-  font-size: 200%;
-}
-
-/* Links */
+/**
+ *   LINKS
+ */
 
 a {
   color: #09c;
@@ -112,13 +153,18 @@ a:visited {
 }
 
 
+/**
+ * FOOTER
+ */
+
 footer {
-  background-color: #bbb;
+  background-color: #fff;
   text-align: center;
   margin-top: 10px;
   width: 710px;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 
 footer nav {
@@ -261,3 +307,5 @@ form.new_micropost textarea {
 
 
 div#user_nav { float: right; font-size: 0.9em; }
+
+

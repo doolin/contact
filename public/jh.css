@@ -1,0 +1,198 @@
+
+/* Modified from Jared Hansen. */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #000;
+	background: #fff;
+}
+
+#canvas {
+	width: 550px;
+	margin: 25px auto;
+	border-top: 2px solid #a9a9a9;
+	border-bottom: 2px solid #a9a9a9;
+}
+
+#tabs {
+	margin: 0;
+	padding: 5px 0 0 10px;
+	clear: both;
+	list-style: none;
+}
+
+#tabs li {
+	float: left;
+	margin: 0;
+	padding: 2px 8px;
+	font-size: 85%;
+	font-weight: bold;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	background-color: #eee;
+}
+
+#tabs li.first {
+	border-left: 1px solid #999;
+}
+
+#tabs a, #tabs a:visited {
+	color: #000;
+}
+
+#tabs .selected {
+	background-color: #bbb;
+}
+
+#view {
+	padding: 10px 10px;
+	clear: both;
+	border-top: 1px solid #999;
+}
+
+.vcard {
+	margin: 5px 10px;
+}
+
+.vcard .photo {
+	float: right;
+	margin: 4px 0 0 0;
+	padding: 2px;
+	border: 1px solid #ddd;
+}
+
+.vcard h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 185%;
+}
+
+.vcard h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-weight: normal;
+	color: #666;
+}
+
+td.f {
+	width: 75px;
+	padding-right: 5px;
+	vertical-align: top;
+	text-align: right;
+	font-weight: bold;
+}
+
+td.v {
+	vertical-align: top;
+}
+
+tr.spacer {
+	height: 10px;
+	font-size: 0px;
+}
+
+a, a:visited {
+	color: #00c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00c;
+	text-decoration: underline;
+}
+
+a.im {
+	padding: 0 0 0 11px;
+	background-position: center left;
+	background-repeat: no-repeat;
+}
+
+a.offline {
+	background-image: url(../images/offline.gif);
+}
+
+a.available {
+	background-image: url(../images/available.gif);
+}
+
+a.chat {
+	background-image: url(../images/available.gif);
+}
+
+a.away {
+	background-image: url(../images/away.gif);
+}
+
+a.dnd {
+	background-image: url(../images/away.gif);
+}
+
+a.sn {
+	padding: 0 0 0 18px;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+#blog {
+	background-image: url(../images/feed.gif);
+}
+
+#delicious {
+	background-image: url(../images/delicious.gif);
+}
+
+#facebook {
+	background-image: url(../images/facebook.gif);
+}
+
+#flickr {
+	background-image: url(../images/flickr.gif);
+}
+
+#friendfeed {
+	background-image: url(../images/friendfeed.gif);
+}
+
+#lastfm {
+	background-image: url(../images/lastfm.gif);
+}
+
+#linkedin {
+	background-image: url(../images/linkedin.gif);
+}
+
+#twitter {
+	background-image: url(../images/twitter.gif);
+}
+
+#upcoming {
+	background-image: url(../images/upcoming.gif);
+}
+
+#youtube {
+	background-image: url(../images/youtube.gif);
+}
+
+
+#me {
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 10px;
+	border-top: 1px solid #999;
+	list-style: none;
+}
+
+#avatars {
+	margin: 10px 0 0 0;
+	padding: 10px 17px 10px 17px;
+	border-top: 1px solid #999;
+}
+
+#avatars img {
+	margin: 4px 5px 0 5px;
+	padding: 2px;
+	border: 1px solid #ddd;
+}

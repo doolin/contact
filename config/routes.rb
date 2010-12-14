@@ -12,6 +12,7 @@ Contact::Application.routes.draw do
 
   devise_scope :admin do
     get "/login" => "devise/sessions#new"
+    get "/logout" => "devise/sessions#destroy"
   end
 
 end

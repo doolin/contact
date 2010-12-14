@@ -1,0 +1,216 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://opengraphprotocol.org/schema/"> 
+ 
+<head> 
+<title>Jared Hanson</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="X-XRDS-Location" content="http://www.jaredhanson.net/meta.xrds" /> 
+<link rel="stylesheet" href="resources/styles/screen.css" type="text/css" media="screen" /> 
+<link rel="canonical" href="http://www.jaredhanson.net/" /> 
+<link rel="describedby" href="http://www.jaredhanson.net/meta.xrd" type="application/xrd+xml" /> 
+<link rel="openid.server" href="https://www.google.com/accounts/o8/ud" /> 
+<link rel="openid.delegate" href="http://www.google.com/profiles/jaredhanson" /> 
+<link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud" /> 
+<link rel="openid2.local_id" href="http://www.google.com/profiles/jaredhanson" /> 
+<link rel="pavatar" href="http://www.jaredhanson.net/avatars/20100620-80x80.jpg" type="image/jpeg" /> 
+<link rel="blogroll" href="http://www.jaredhanson.net/feeds.opml" type="text/x-opml" /> 
+<link rel="EditURI" href="http://www.jaredhanson.net/meta.rsd" type="application/rsd+xml" title="RSD" /> 
+<link rel="alternate" href="http://www.jaredhanson.net/index.poco.json" type="application/poco+json" /> 
+<link rel="alternate" href="http://www.jaredhanson.net/index.poco.xml" type="application/poco+xml" /> 
+<link rel="meta" href="http://www.jaredhanson.net/index.rdf" type="application/rdf+xml" title="Jared Hanson (RDF)" /> 
+<meta name="description" content="Jared Hanson is an entrepreneur and software engineer in the San Francisco Bay Area.  Contact Jared via his website." /> 
+<meta name="microid" content="mailto+http:sha1:3e4865477df8895f3ec34d08dafa3122f7730406" /> <!-- jaredhanson AT gmail.com --> 
+<meta name="microid" content="mailto+http:sha1:2ae6c4ad1264beab6df8ff25f37155ba9800c40e" /> <!-- jaredhanson AT mac.com --> 
+<meta name="microid" content="mailto+http:sha1:c5379bf53e640bcb2f5a01babe8ad1e881df83ab" /> <!-- jared.hanson AT helixent.com --> 
+<meta name="geo.position" content="37.87;-122.27" /> 
+<meta name="geo.region" content="US-CA" /> 
+<meta name="geo.placename" content="Berkeley, CA" /> 
+<meta property="og:title" content="Jared Hanson" /> 
+<meta property="og:type" content="person" /> 
+<meta property="og:url" content="http://www.jaredhanson.net/" /> 
+<meta property="og:image" content="http://www.jaredhanson.net/avatars/20100620-80x80.jpg" /> 
+<meta name="verify-v1" content="chtXzH2s1C08T8VaDe51sPoST4u7jh7K/KOa+SLUZS8=" /> 
+<meta name="y_key" content="92af1c9fd83fab4c" /> 
+<script type="text/javascript" src="resources/scripts/mootools.v1.00.js"></script> 
+<script type="text/javascript" src="resources/scripts/person.js"></script> 
+<script type="text/javascript"> 
+	function onLoad() {
+		var aim = new Ajax('/presence/aim.php', {method: 'get', onComplete: displayAimPresence});
+		aim.request();
+		var gtalk = new Ajax('/presence/gtalk.php', {method: 'get', onComplete: displayGtalkPresence});
+		gtalk.request();
+		var msn = new Ajax('/presence/msn.php', {method: 'get', onComplete: displayMsnPresence});
+		msn.request();
+		var skype = new Ajax('/presence/skype.php', {method: 'get', onComplete: displaySkypePresence});
+		skype.request();
+		var yahoo = new Ajax('/presence/yahoo.php', {method: 'get', onComplete: displayYahooPresence});
+		yahoo.request();
+	}
+</script> 
+</head> 
+ 
+<body onload="onLoad()"> 
+<div id="canvas"> 
+ 
+<div class="vcard"> 
+	
+	<div> 
+		<img class="photo" src="avatars/20100620-80x80.jpg" width="80" height="80" alt="Jared Hanson" /> 
+		<h1 class="fn">Jared Hanson</h1> 
+		<h2 class="url">www.jaredhanson.net</h2> 
+	</div> 
+ 
+	<div> 
+		<ul id="tabs"> 
+			<li id="home-tab" class="first selected"><a href="#" onclick="showTab('home'); return false;">Home</a></li> 
+			<li id="work-tab"><a href="#" onclick="showTab('work'); return false;">Work</a></li> 
+		</ul> 
+ 
+		<div id="view"> 
+			<div id="home"> 
+				<table> 
+					<tr> 
+						<td class="f">email</td> 
+						<td class="v"><a class="email" href="mailto:jaredhanson@gmail.com">jaredhanson@gmail.com</a></td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr class="tel"> 
+						<td class="f type">voice</td> 
+						<td class="v value"><a href="tel:1-510-984-2480">510-984-2480</a></td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr> 
+						<td class="f">aim</td> 
+						<td class="v"><a id="aim" class="url im offline" href="aim:goim?screenname=jaredhanson@mac.com">jaredhanson@mac.com</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">jabber</td> 
+						<td class="v"><a id="gtalk" class="url im offline" href="xmpp:jaredhanson@gmail.com">jaredhanson@gmail.com</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">msn</td> 
+						<td class="v"><a id="msn" class="url im offline" href="msnim:chat?contact=jared.hanson@hotmail.com">jared.hanson@hotmail.com</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">skype</td> 
+						<td class="v"><a id="skype" class="url im offline" href="skype:jaredhanson?chat">jaredhanson</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">yahoo</td> 
+						<td class="v"><a id="yahoo" class="url im offline" href="ymsgr:sendIM?jared.hanson">jared.hanson</a></td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr> 
+						<td class="f">facebook</td> 
+						<td class="v"><a id="facebook" class="url sn" href="http://www.facebook.com/jaredhanson" rel="me">facebook.com/jaredhanson</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">linkedin</td> 
+						<td class="v"><a id="linkedin" class="url sn" href="http://www.linkedin.com/in/jaredhanson" rel="me">linkedin.com/in/jaredhanson</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">blog</td> 
+						<td class="v"><a id="blog" class="url sn" href="http://www.backdrifter.com/" rel="me">backdrifter.com</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">twitter</td> 
+						<td class="v"><a id="twitter" class="url sn" href="http://twitter.com/jaredhanson" rel="me">twitter.com/jaredhanson</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">flickr</td> 
+						<td class="v"><a id="flickr" class="url sn" href="http://www.flickr.com/photos/jaredhanson/" rel="me">flickr.com/photos/jaredhanson</a></td> 
+					</tr> 
+					<tr> 
+						<td class="f">youtube</td> 
+						<td class="v"><a id="youtube" class="url sn" href="http://www.youtube.com/jaredhanson" rel="me">youtube.com/jaredhanson</a></td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr> 
+						<td class="f">address</td> 
+						<td class="v"> 
+							<div class="adr"> 
+								<span class="locality">Berkeley</span>,
+								<span class="region">CA</span> 
+								<div class="country-name">United States</div> 
+							</div> 
+						</td> 
+					</tr> 
+				</table> 
+			</div> 
+ 
+			<div id="work" style="display: none"> 
+				<table> 
+					<tr class="org"> 
+						<td class="f type">company</td> 
+						<td class="v value">Helixent Technologies, LLC</td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr> 
+						<td class="f">www</td> 
+						<td class="v"><a class="url" href="http://www.helixent.com/">www.helixent.com</a></td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr> 
+						<td class="f">email</td> 
+						<td class="v"><a class="email" href="mailto:jared.hanson@helixent.com">jared.hanson@helixent.com</a></td> 
+					</tr> 
+					<tr class="spacer"> 
+						<td class="f">&nbsp;</td> 
+						<td class="v">&nbsp;</td> 
+					</tr> 
+					<tr> 
+						<td class="f">address</td> 
+						<td class="v"> 
+							<div class="adr"> 
+								<div class="street-address">118 W. Center St.</div> 
+								<span class="locality">Madison</span>,
+								<span class="region">SD</span> 
+								<span class="postal-code">57042</span> 
+								<div class="country-name">United States</div> 
+							</div> 
+						</td> 
+					</tr> 
+				</table> 
+			</div> 
+		</div> 
+	</div> 
+ 
+</div> 
+ 
+ 
+<div style="display: none"> 
+	<a rel="me" href="/me/">Me</a> 
+	<a rel="me" href="/contacts/">Contacts</a> 
+</div> 
+ 
+</div> 
+ 
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-104798-6";
+urchinTracker();
+</script> 
+ 
+</body> 
+</html> 

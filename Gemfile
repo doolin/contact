@@ -15,13 +15,13 @@ group :cucumber do
 end  
 
 group :development do
-  gem 'rspec-rails', '2.1.0'
+  gem 'rspec-rails'
   gem 'annotate-models', '1.0.4'
 end
 
 group :test do
-  gem 'rspec', '2.1.0'
-  gem 'rspec-rails', '2.1.0'
+  gem 'rspec'
+  gem 'rspec-rails'
   gem 'webrat', '0.7.2'
   gem 'factory_girl_rails', '1.0'
   gem 'email_spec' 
