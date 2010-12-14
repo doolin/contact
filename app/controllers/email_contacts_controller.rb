@@ -14,6 +14,8 @@ class EmailContactsController < ApplicationController
   # GET /email_contacts/1
   # GET /email_contacts/1.xml
   def show
+    
+    # TODO: add authorization here.
     @email_contact = EmailContact.find(params[:id])
 
     respond_to do |format|
@@ -83,6 +85,8 @@ class EmailContactsController < ApplicationController
 
   # DELETE /email_contacts/1
   # DELETE /email_contacts/1.xml
+  # TODO: Add authentication so users not signed
+  #       cannot delete.
   def destroy
     @email_contact = EmailContact.find(params[:id])
     @email_contact.destroy

@@ -69,7 +69,7 @@ section h1 {
 }
 
 tbody tr:nth-child(even) td, tbody tr.even td {
-  background:#e5ec00;
+  background:#eee;
 }
 
 
