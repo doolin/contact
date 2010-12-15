@@ -3,24 +3,32 @@ class EmailContactsController < ApplicationController
   # GET /email_contacts
   # GET /email_contacts.xml
   def index
-    @email_contacts = EmailContact.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @email_contacts }
-    end
+    if admin_signed_in?
+      @email_contacts = EmailContact.all
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @email_contacts }
+      end
+    else
+      redirect_to root_path
+    end 
   end
 
   # GET /email_contacts/1
   # GET /email_contacts/1.xml
   def show
-    
-    # TODO: add authorization here.
-    @email_contact = EmailContact.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @email_contact }
+    # TODO: add authorization here.  This should be redundant,
+    # an unauthorized user should never get here.
+    if admin_signed_in?
+      @email_contact = EmailContact.find(params[:id])
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @email_contact }
+      end
+    else
+      redirect_to root_path
     end
   end
 
