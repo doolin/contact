@@ -24,3 +24,4 @@ Feature: Admin manages emails
     And I fill in the forwarding email address
     Then the email is forwarded
   
+  
