@@ -24,3 +24,7 @@ Feature: Admin manages emails
     And I fill in the forwarding email address
     Then the email is forwarded
   
+  Scenario: User not logged should not see email list
+    Given not logged in user on any page
+    Then the "list" link should not be displayed
+    And the user should be routed to index page
