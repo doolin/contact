@@ -5,8 +5,8 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
+    <th>Subject</th>
     <th>Message</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -15,8 +15,12 @@
   <tr>
     <td><%= email_contact.name %></td>
     <td><%= email_contact.email %></td>
-    <td><%= email_contact.subject %></td>
-    <td><%= email_contact.message %></td>
+    <td>
+      <% if email_contact.subject? %>
+      <%=   email_contact.subject[0..30] %>
+      <% end %>
+    </td>
+    <td><%= email_contact.message[0..30] %></td>
     <td><%= link_to 'Show', email_contact %></td>
     <td><%= link_to 'Edit', edit_email_contact_path(email_contact) %></td>
     <td><%= link_to 'Destroy', email_contact, :confirm => 'Are you sure?', :method => :delete %></td>

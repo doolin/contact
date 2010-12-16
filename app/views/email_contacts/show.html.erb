@@ -11,10 +11,14 @@
 </p>
 
 <p>
+  <b>Subject:</b>
+  <%= @email_contact.subject %>
+</p>
+
+<p>
   <b>Message:</b>
   <%= @email_contact.message %>
 </p>
-
 
 <%= link_to 'Edit', edit_email_contact_path(@email_contact) %> |
 <%= link_to 'Back', email_contacts_path %>
