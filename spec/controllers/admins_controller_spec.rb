@@ -7,7 +7,7 @@ describe AdminsController do
   describe "#sign_in" do 
 
     it "should be successful" do
-      get :login
+      get '/login'
       response.should be_success
     end   
 
