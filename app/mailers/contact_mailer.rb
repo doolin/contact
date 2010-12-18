@@ -2,12 +2,13 @@ class ContactMailer < ActionMailer::Base
 
 default :to => "david.doolin@gmail.com"
 
-# todo: Add cc: to user.
   def welcome_email(user)
     @user = user
     @url  = "http://example.com/login"
-    mail(:from => user.email,
-         :subject => "Welcome to My Awesome Site")
+    mail(:from => @user.email,
+         :cc => @user.email,
+         :reply_to => @user.email,
+         :subject => "Email from #{@user.email}")
   end
 
 end
