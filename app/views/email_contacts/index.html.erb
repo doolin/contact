@@ -9,16 +9,17 @@
     <th>Message</th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @email_contacts.each do |email_contact| %>
   <tr>
     <td><%= email_contact.name %></td>
-    <td><%= email_contact.email %></td>
     <td>
-      <% if email_contact.subject? %>
-      <%=   email_contact.subject[0..30] %>
-      <% end %>
+      <%= email_contact.email %>
+    </td>
+    <td>
+      <%= email_contact.subject[0..30] %>
     </td>
     <td><%= email_contact.message[0..30] %></td>
     <td><%= link_to 'Show', email_contact %></td>

@@ -14,7 +14,7 @@ describe ContactMailer do
     end
 
     it "renders the body" do
-#      mail.body.encoded.should match("Hi")
+      mail.body.encoded.should match("dave")
     end
   end
 end

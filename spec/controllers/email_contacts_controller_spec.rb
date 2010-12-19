@@ -4,7 +4,9 @@ require 'spec_helper'
 
 describe EmailContactsController do
 
-render_views
+  include Devise::TestHelpers
+
+  render_views
 
   describe "GET thankyou" do
     it "should have Thanks in the response" do
@@ -12,8 +14,6 @@ render_views
       response.should have_selector("p", :content => "Thanks")
     end
   end
-
-
 
 
   def mock_email_contact(stubs={})

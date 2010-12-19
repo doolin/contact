@@ -1,8 +1,14 @@
 require 'spec_helper.rb'
 
+# Need to "sign in" before 
+
 describe AdminsController do 
 
   render_views
+
+#  before(:each) do
+#    sign_in
+#  end
 
   describe "#sign_in" do 
 
