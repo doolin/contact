@@ -308,4 +308,6 @@ form.new_micropost textarea {
 
 div#user_nav { float: right; font-size: 0.9em; }
 
-
+.f {
+  text-align: right;
+}
