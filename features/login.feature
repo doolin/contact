@@ -13,18 +13,21 @@ Feature: Admin manages emails
     And I click on a email delete link
     Then the email is deleted 
 
+  Scenario: User not logged should not see email list
+    Given not logged in user on any page
+    Then the "list" link should not be displayed
+    And the user should be routed to index page
+
+  @v0.2
   Scenario: Admin resends email
     Given I open the email
     And I click on the resend link
     Then the email is resent
 
+  @v0.2
   Scenario: Admin forwards email
     Given I open the email
     And I click on the forward link
     And I fill in the forwarding email address
     Then the email is forwarded
   
-  Scenario: User not logged should not see email list
-    Given not logged in user on any page
-    Then the "list" link should not be displayed
-    And the user should be routed to index page
