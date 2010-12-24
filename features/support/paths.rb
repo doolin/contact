@@ -13,7 +13,13 @@ module NavigationHelpers
 
     when /the users sign_in page/
       '/login'
+      
+    when /Send me an email!/
+      '/'
 
+    when /the email contacts page/
+      '/email_contacts'
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

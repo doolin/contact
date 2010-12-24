@@ -10,6 +10,7 @@ describe AdminsController do
 #    sign_in
 #  end
 
+=begin
   describe "#sign_in" do 
 
     it "should be successful" do
@@ -18,5 +19,6 @@ describe AdminsController do
     end   
 
   end
+=end
 
 end 

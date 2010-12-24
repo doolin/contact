@@ -15,6 +15,7 @@ group :cucumber do
 end  
 
 group :development do
+  gem 'wrong'
   gem 'rspec-rails'
   gem 'annotate-models', '1.0.4'
 end

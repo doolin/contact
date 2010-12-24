@@ -8,6 +8,12 @@ describe EmailContactsController do
 
   render_views
 
+  # This runs, but I don't think it does anything
+  before(:each) do
+    @admin = Admin.create("13")
+    sign_in(:admin,@admin)
+  end
+  
   describe "GET thankyou" do
     it "should have Thanks in the response" do
       get :thankyou
@@ -58,7 +64,6 @@ describe EmailContactsController do
     end
   end
 
-=begin
   describe "POST create" do
 
     describe "with valid params" do
@@ -69,15 +74,17 @@ describe EmailContactsController do
       end
 
 
-
+#=begin
       it "redirects to the created email_contact" do
         EmailContact.stub(:new) { mock_email_contact(:save => true) }
         post :create, :email_contact => {}
-        response.should redirect_to(email_contact_url(mock_email_contact))
+#        response.should redirect_to(email_contact_url(mock_email_contact))
+        response.should redirect_to(thankyou_path)
       end
-
+#=end
     end
 
+=begin
     describe "with invalid params" do
       it "assigns a newly created but unsaved email_contact as @email_contact" do
         EmailContact.stub(:new).with({'these' => 'params'}) { mock_email_contact(:save => false) }
@@ -91,10 +98,11 @@ describe EmailContactsController do
         response.should render_template("new")
       end
     end
+=end
 
   end
 
-
+=begin
   describe "PUT update" do
 
     describe "with valid params" do
@@ -132,7 +140,9 @@ describe EmailContactsController do
     end
 
   end
+=end
 
+=begin
   describe "DELETE destroy" do
     it "destroys the requested email_contact" do
       EmailContact.should_receive(:find).with("37") { mock_email_contact }
@@ -147,4 +157,6 @@ describe EmailContactsController do
     end
   end
 =end
+
+
 end
