@@ -5,6 +5,7 @@ Contact::Application.routes.draw do
   #get "email_contacts/thankyou"
   
   match '/thankyou', :to => 'email_contacts#thankyou'
+  match "/admins/sign_up" => 'email_contacts#new'
 
   root :to => 'email_contacts#new'
 
