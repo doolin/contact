@@ -20,5 +20,5 @@
   <%= @email_contact.message %>
 </p>
 
-<%= link_to 'Edit', edit_email_contact_path(@email_contact) %> |
-<%= link_to 'Back', email_contacts_path %>
+<%= link_to 'Delete', email_contact_path(@email_contact), :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Back to list', email_contacts_path %>
