@@ -1,6 +1,7 @@
 class AdminsController < ApplicationController 
 
   def new
+    #redirect_to root_path
   end
 
 =begin
