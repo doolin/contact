@@ -45,7 +45,8 @@ class EmailContactsController < ApplicationController
 
   # GET /email_contacts/1/edit
   def edit
-    @email_contact = EmailContact.find(params[:id])
+    redirect_to email_contacts_path
+#    @email_contact = EmailContact.find(params[:id])
   end
 
   # POST /email_contacts

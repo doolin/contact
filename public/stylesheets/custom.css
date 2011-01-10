@@ -18,6 +18,13 @@ body {
   border-style: solid;
   border-width: 1px;
   border-color: #777;
+ -webkit-box-shadow: 5px 5px 5px #888; 
+ -moz-box-shadow: 5px 5px 5px #888; 
+  box-shadow: 5px 5px 5px #888;   
+ -moz-border-radius: 7px; 
+ -webkit-border-radius: 7px; 
+ -khtml-border-radius: 7px;    
+  border-radius: 7px;  
 }
 
 .container {
