@@ -4,15 +4,12 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <p>Thank you for contacting me, <%= @user.name %></p>
-    <p>I'll respond as soon as I can.</p>
-    <p>-dave doolin</p>
     
+    <p>ContactMe message from <%= @user.name %>:</p>
+
     <hr />
     
-    <strong>Your message:</strong>
-    
     <%= @user.message %>
-    
+
   </body>
 </html>
