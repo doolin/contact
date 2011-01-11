@@ -5,13 +5,12 @@ Feature: Admin manages emails
     When I fill in "Email" with "foo@bar.com"
     And I fill in "Password" with "frobnosticate"
     When I press "Sign in"
-    Then I should be on the "Send me an email!" page
-    And I should see delete links
+    Then I should be on "Send me an email!" page
 
   @delete
   Scenario: Admin deletes an email
     Given I am on the email contacts page
-    And I click on a email delete link
+    And I click on the email delete link
     Then the email is deleted 
  
   @not-logged-in

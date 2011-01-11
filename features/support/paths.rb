@@ -15,7 +15,7 @@ module NavigationHelpers
       '/login'
       
     when /Send me an email!/
-      '/'
+      '/email_contacts'
 
     when /the email contacts page/
       '/email_contacts'

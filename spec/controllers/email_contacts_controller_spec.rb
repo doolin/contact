@@ -1,9 +1,12 @@
 require 'spec_helper'
 
 
-
 describe EmailContactsController do
 
+  # See: 
+  # https://github.com/plataformatec/devise
+  # http://rdoc.info/github/plataformatec/devise/master/Devise/TestHelpers
+  # The TestHelpers create sign_in/sign_out capability.
   include Devise::TestHelpers
 
   render_views
@@ -14,6 +17,18 @@ describe EmailContactsController do
     sign_in(:admin,@admin)
   end
   
+  def mock_email_contact(stubs={})
+    if stubs.empty? 
+      puts "Stubs empty" 
+    end
+    (@mock_email_contact ||= mock_model(EmailContact).as_null_object).tap do |email_contact|
+      puts @mock_email_contact.email
+      email_contact.stub(stubs) unless stubs.empty?
+    end
+  end
+
+  # This is really a view spec, adding the message to the thankyou 
+  # page would be tested here.
   describe "GET thankyou" do
     it "should have Thanks in the response" do
       get :thankyou
@@ -21,12 +36,6 @@ describe EmailContactsController do
     end
   end
 
-
-  def mock_email_contact(stubs={})
-    (@mock_email_contact ||= mock_model(EmailContact).as_null_object).tap do |email_contact|
-      email_contact.stub(stubs) unless stubs.empty?
-    end
-  end
 
   describe "GET index" do
     it "assigns all email_contacts as @email_contacts" do
@@ -37,12 +46,13 @@ describe EmailContactsController do
   end
 
 
-
+=begin
   describe "GET show" do
     it "assigns the requested email_contact as @email_contact" do
       EmailContact.stub(:find).with("37") { mock_email_contact }
       get :show, :id => "37"
-      assigns(:email_contact).should be(mock_email_contact)
+      #assigns(:email_contact).should be(mock_email_contact)
+      assigns(:email_contact).should == mock_email_contact
     end
   end
 
@@ -63,7 +73,9 @@ describe EmailContactsController do
       assigns(:email_contact).should be(mock_email_contact)
     end
   end
+=end
 
+=begin
   describe "POST create" do
 
     describe "with valid params" do
@@ -74,15 +86,15 @@ describe EmailContactsController do
       end
 
 
-#=begin
       it "redirects to the created email_contact" do
         EmailContact.stub(:new) { mock_email_contact(:save => true) }
         post :create, :email_contact => {}
 #        response.should redirect_to(email_contact_url(mock_email_contact))
         response.should redirect_to(thankyou_path)
       end
-#=end
     end
+=end
+
 
 =begin
     describe "with invalid params" do
@@ -98,9 +110,10 @@ describe EmailContactsController do
         response.should render_template("new")
       end
     end
-=end
 
   end
+=end
+
 
 =begin
   describe "PUT update" do

@@ -3,3 +3,6 @@
 #  pending # express the regexp above with the code you wish you had
 #end
 
+Given /^I click on the email delete link$/ do
+  pending # express the regexp above with the code you wish you had
+end
