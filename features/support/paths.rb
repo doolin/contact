@@ -11,7 +11,7 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
-    when /the users sign_in page/
+    when /the admin's sign_in page/
       '/login'
       
     when /Send me an email!/
