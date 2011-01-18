@@ -9,6 +9,6 @@ Feature: Send Dave an email
     And I fill in "Subject" with "Nothing"
     And I fill in "Message" with "not hardly"
     When I press "Send"
-    And I should see the "About" page
+    Then I should be on Thank you
 
 

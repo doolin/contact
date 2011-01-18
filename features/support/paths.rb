@@ -20,6 +20,9 @@ module NavigationHelpers
     when /the email contacts page/
       '/email_contacts'
       
+    when /Thank you/
+      '/thankyou'
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
