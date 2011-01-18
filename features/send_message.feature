@@ -3,13 +3,12 @@ Feature: Send Dave an email
   and press the Send button.
 
   Scenario: Send Dave an email
-    Given there's a message sending form web page
-    And I fill in the "Name" field
-    And I fill in the "Email Address" field
-    And I fill in the "Subject" field
-    And I fill in the "Message" field
+    Given I'm on the message sending form page
+    And I fill in "Name" with "Dave"
+    And I fill in "Email" with "dave@foo.bar"
+    And I fill in "Subject" with "Nothing"
+    And I fill in "Message" with "not hardly"
     When I press "Send"
-    Then Dave should get my email
     And I should see the "About" page
 
 
