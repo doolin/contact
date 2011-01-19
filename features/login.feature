@@ -1,5 +1,11 @@
 Feature: Admin manages emails
 
+  Background: Email list
+    Given the following email_contacts exist:
+      | Name | Email                  | Subject | Message |
+      | Dave | david.doolin@gmail.com | foo     | bar     |
+      | Mike | mikefoo@foogmail.com   | bar     | foo     |
+
 
   #Scenario Outline: Creating a new account
   Scenario: Creating a new account
@@ -19,7 +25,7 @@ Feature: Admin manages emails
   Scenario: Admin deletes an email
     Given I am an authenticated admin
     And I am on the email contacts page
-    And I click on the email "Delete" link
+    When I click on the email "Delete" link
     Then the email is deleted 
  
   @not-logged-in
