@@ -7,7 +7,6 @@ Feature: Admin manages emails
       | Mike | mikefoo@foogmail.com   | bar     | foo     |
 
 
-  #Scenario Outline: Creating a new account
   Scenario: Creating a new account
     Given I am not authenticated
     When I go to the admin's sign_in page #
@@ -28,12 +27,6 @@ Feature: Admin manages emails
     When I click on the email "Delete" link
     Then the email is deleted 
  
-  @not-logged-in
-  Scenario: User not logged should not see email list
-    Given not logged in user on any page
-    Then the "list" link should not be displayed
-    And the user should be routed to index page
-
   @v0.2
   Scenario: Admin resends email
     Given I open the email
