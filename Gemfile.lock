@@ -61,6 +61,7 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.14)
+    dalli (1.0.2)
     database_cleaner (0.6.0)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
@@ -177,6 +178,7 @@ DEPENDENCIES
   capybara
   cucumber
   cucumber-rails
+  dalli
   database_cleaner
   devise
   dynamic_form
