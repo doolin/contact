@@ -1,4 +1,8 @@
 
-# Documentation coming when it's done
+# Front end for http://contactdaviddoolin.com
 
-Until then, feel free to reverse engineer the source.
+App is half an email client, archives then forwards
+emails out of a contact form. 
+
+The form itself could be extracted into a gem in the
+future.
