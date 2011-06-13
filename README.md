@@ -1,5 +1,5 @@
 
-# Front end for http://contactdaviddoolin.com ![Still maintained](http://stillmaintained.com/jeffkreeftmeijer/stillmaintained "Still maintained")
+# Front end for http://contactdaviddoolin.com ![Still maintained](http://stillmaintained.com/jeffkreeftmeijer/stillmaintained.png "Still maintained")
 
 
 App is half an email client, archives then forwards
