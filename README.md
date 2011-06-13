@@ -1,5 +1,6 @@
 
-# Front end for http://contactdaviddoolin.com
+# Front end for http://contactdaviddoolin.com ![Still maintained] "http://stillmaintained.com/jeffkreeftmeijer/stillmaintained")
+
 
 App is half an email client, archives then forwards
 emails out of a contact form. 

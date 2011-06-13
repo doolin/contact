@@ -1,10 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.7'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
 gem 'dalli'
+gem "builder", "~> 2.1.2"
 
 group :cucumber do
   gem 'capybara'
