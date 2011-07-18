@@ -1,9 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.9'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
+
+gem 'actionmailer'
+
 #gem 'dalli'
 #gem "builder", "~> 2.1.2"
 
@@ -23,10 +26,8 @@ group :development do
 end
 
 group :test do
-#  gem 'rspec'
+  gem 'rspec'
   gem 'rspec-rails'
-#  gem 'webrat', '0.7.2'
-  gem 'factory_girl_rails'
   gem 'email_spec' 
-#  gem 'cover_me', '>= 1.0.0.rc2'
+  gem 'factory_girl_rails'
 end
