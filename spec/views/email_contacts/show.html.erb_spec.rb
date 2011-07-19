@@ -3,7 +3,7 @@ require 'spec_helper'
 
 ## This all should work but doesn't.
 describe "email_contacts/show.html.erb" do
-=begin
+
   before(:each) do
     @email_contact = assign(:email_contact, stub_model(EmailContact,
       :name => "Name",
@@ -21,5 +21,4 @@ describe "email_contacts/show.html.erb" do
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     rendered.should match(/Message/)
   end
-=end
 end
