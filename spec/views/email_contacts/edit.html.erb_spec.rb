@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe "email_contacts/edit.html.erb" do
 
-
   before(:each) do
     @email_contact = assign(:email_contact, stub_model(EmailContact,
       :new_record? => false,
@@ -13,14 +12,22 @@ describe "email_contacts/edit.html.erb" do
     ))
   end
 
+  it "should redirect to the email listings" do
+    render
+    # wrongo - should be in a controller spec
+    #rendered.should redirect_to(email_contacts_path)
+  end
 
   it "should have Editing" do
     render
     rendered.should have_selector("h2", :content => "Editing")
   end
 
-  it "should not have 'Send me an email!'" do
-    pending "Remove 'Send me an email!' from the form partial."
+  xit "should not have 'Send me an email!'" do
+    admin = Factory(:admin)
+    sign_in admin
+    p edit_email_contact_path(@email_contact)
+    #pending "Remove 'Send me an email!' from the form partial."
     render
     rendered.should_not have_selector("h2", :content => "Send me an email!")
   end

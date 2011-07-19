@@ -11,18 +11,13 @@ describe EmailContactsController do
 
   render_views
 
-  # This runs, but I don't think it does anything
   before(:each) do
     @admin = Admin.create("13")
     sign_in(:admin,@admin)
   end
   
   def mock_email_contact(stubs={})
-    if stubs.empty? 
-      puts "Stubs empty" 
-    end
     (@mock_email_contact ||= mock_model(EmailContact).as_null_object).tap do |email_contact|
-      puts @mock_email_contact.email
       email_contact.stub(stubs) unless stubs.empty?
     end
   end
@@ -38,21 +33,21 @@ describe EmailContactsController do
 
 
   describe "GET index" do
-    xit "assigns all email_contacts as @email_contacts" do
-      EmailContact.stub(:all) { [mock_email_contact] }
+    it "assigns all email_contacts as @email_contacts" do
+      #EmailContact.stub(:all) { [mock_email_contact] }
+      EmailContact.stub(:all) { mock_email_contact }
       get :index
-      assigns(:email_contacts).should eq([mock_email_contact])
+      assigns(:email_contacts).should eq(@mock_email_contact)
     end
   end
 
 
-=begin
   describe "GET show" do
     it "assigns the requested email_contact as @email_contact" do
       EmailContact.stub(:find).with("37") { mock_email_contact }
       get :show, :id => "37"
       #assigns(:email_contact).should be(mock_email_contact)
-      assigns(:email_contact).should == mock_email_contact
+      assigns(:email_contact).should == @mock_email_contact
     end
   end
 
@@ -62,7 +57,7 @@ describe EmailContactsController do
     it "assigns a new email_contact as @email_contact" do
       EmailContact.stub(:new) { mock_email_contact }
       get :new
-      assigns(:email_contact).should be(mock_email_contact)
+      assigns(:email_contact).should be(@mock_email_contact)
     end
   end
 
@@ -70,12 +65,10 @@ describe EmailContactsController do
     it "assigns the requested email_contact as @email_contact" do
       EmailContact.stub(:find).with("37") { mock_email_contact }
       get :edit, :id => "37"
-      assigns(:email_contact).should be(mock_email_contact)
+      assigns(:email_contact).should be(@mock_email_contact)
     end
   end
-=end
 
-=begin
   describe "POST create" do
 
     describe "with valid params" do
@@ -93,10 +86,8 @@ describe EmailContactsController do
         response.should redirect_to(thankyou_path)
       end
     end
-=end
 
 
-=begin
     describe "with invalid params" do
       it "assigns a newly created but unsaved email_contact as @email_contact" do
         EmailContact.stub(:new).with({'these' => 'params'}) { mock_email_contact(:save => false) }
@@ -112,10 +103,8 @@ describe EmailContactsController do
     end
 
   end
-=end
 
 
-=begin
   describe "PUT update" do
 
     describe "with valid params" do
@@ -153,9 +142,7 @@ describe EmailContactsController do
     end
 
   end
-=end
 
-=begin
   describe "DELETE destroy" do
     it "destroys the requested email_contact" do
       EmailContact.should_receive(:find).with("37") { mock_email_contact }
@@ -169,7 +156,6 @@ describe EmailContactsController do
       response.should redirect_to(email_contacts_url)
     end
   end
-=end
 
 
 end
