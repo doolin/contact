@@ -1,7 +1,9 @@
 # Front end for http://contactdaviddoolin.com 
 ![Still maintained](http://stillmaintained.com/jeffkreeftmeijer/stillmaintained.png "Still maintained") 
 
-[![Build status]](http://travis-ci.org/doolin/portfolio-project.png "Build status")
+
+[![Build
+Status](https://secure.travis-ci.org/doolin/contact.png)](http://travis-ci.org/doolin/contact)
 
 Contact is half an email client, archives then forwards
 emails out of a contact form. 
