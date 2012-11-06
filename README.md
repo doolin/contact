@@ -1,5 +1,5 @@
 # Front end for http://contactdaviddoolin.com 
-![Still maintained](http://stillmaintained.com/jeffkreeftmeijer/stillmaintained.png "Still maintained") 
+![Still maintained](http://stillmaintained.com/stillmaintained/stillmaintained.png "Still maintained") 
 
 [![Still maintained]http://stillmaintained.com/stillmaintained/stillmaintained.png](http://stillmaintained.com/stillmaintained/stillmaintained)
 
