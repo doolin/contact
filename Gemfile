@@ -14,6 +14,7 @@ group :cucumber do
 end
 
 group :test do
+  gem 'test-unit' # delete later, this is a bug
   gem 'capybara'
   gem 'rspec'
   gem 'rspec-rails', '2.6.1'
