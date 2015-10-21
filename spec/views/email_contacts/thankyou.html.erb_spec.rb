@@ -12,12 +12,12 @@ describe "email_contacts/thankyou.html.erb" do
 
   it "should have Thanks" do
     render
-    rendered.should have_selector("p", :content => "Thanks")
+    rendered.should have_selector("p", :text => "Thanks")
   end
 
   it "should have email message" do
     render
-    rendered.should have_selector("p", :message => "Thanks")
+    rendered.should have_selector("p", :text => "Thanks")
   end
 
 end

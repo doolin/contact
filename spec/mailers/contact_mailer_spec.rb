@@ -3,7 +3,7 @@ require "spec_helper"
 describe ContactMailer do
 
   before(:each) do
-    @email_contact = Factory(:email_contact)
+    @email_contact = FactoryGirl.create(:email_contact)
   end
 
   describe "contact_mailer" do

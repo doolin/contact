@@ -22,7 +22,7 @@ describe "email_contacts/new.html.erb" do
 
   it "should have Send" do
     render
-    rendered.should have_selector("h2", :content => "Send")
+    rendered.should have_selector("h2", :text => "Send")
   end
 
   it "renders new email_contact form" do
