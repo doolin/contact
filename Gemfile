@@ -7,6 +7,8 @@ gem 'dynamic_form'
 
 gem 'actionmailer'
 
+gem 'rubocop'
+
 group :cucumber do
   gem 'database_cleaner'
   gem 'cucumber-rails'

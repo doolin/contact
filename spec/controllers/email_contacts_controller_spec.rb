@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 describe EmailContactsController do
 
   # See:
@@ -12,7 +11,7 @@ describe EmailContactsController do
   render_views
 
   before(:each) do
-    @admin = Admin.create("13")
+    @admin = Admin.create(password: "13")
     sign_in(:admin,@admin)
   end
 
