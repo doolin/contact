@@ -1,7 +1,7 @@
 class ContactMailer < ActionMailer::Base
-  
+
   #default :to => "david.doolin@gmail.com"
-  
+
   # TODO: Add URL to emails, then delete welcome_email method
   def welcome_email(user)
     @user = user
@@ -11,9 +11,8 @@ class ContactMailer < ActionMailer::Base
          :reply_to => @user.email,
          :subject => "Email from #{@user.email}")
   end
-  
 
-  def daves_copy(user)    
+  def daves_copy(user)
     @user = user
     mail(:to => "david.doolin@gmail.com",
          :from => @user.email,

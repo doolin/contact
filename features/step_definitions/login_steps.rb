@@ -55,7 +55,7 @@ end
 
   # This runs, but I don't think it does anything
 =begin
-  
+
   before(:each) do
     @admin = Admin.create("13")
     sign_in(:admin,@admin)
@@ -71,8 +71,8 @@ end
 Then /^I should land on the "Send me an email!" page$/ do
 end
 
-    
-    
+
+
 # This is currently failing because there are no emails
 # in the email_contacts list.
 Given /^I click on the email "Delete" link$/ do

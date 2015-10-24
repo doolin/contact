@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "email_contacts/index.html.erb" do
-  
+
   before(:each) do
     assign(:email_contacts, [
       mock_model(EmailContact,
@@ -19,7 +19,7 @@ describe "email_contacts/index.html.erb" do
     ])
   end
 
-# This is failing due to the test for empty subject field 
+# This is failing due to the test for empty subject field
 # in index.html.erb at the moment.
   it "renders a list of email_contacts" do
     render
@@ -33,6 +33,6 @@ describe "email_contacts/index.html.erb" do
     assert_select "tr>td", :text => "Message".to_s, :count => 2
   end
 
-#  it "should link to the home page from the header text" 
+#  it "should link to the home page from the header text"
 
 end

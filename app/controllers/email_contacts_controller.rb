@@ -12,7 +12,7 @@ class EmailContactsController < ApplicationController
       end
     else
       redirect_to root_path
-    end 
+    end
   end
 
   # GET /email_contacts/1
@@ -53,7 +53,7 @@ class EmailContactsController < ApplicationController
   # POST /email_contacts
   # POST /email_contacts.xml
   # TODO: something in here is broken on Heroku.
-  # Could be a write onto their file system. 
+  # Could be a write onto their file system.
   # Could be something to do with the gmail plugin.
   def create
     @email_contact = EmailContact.new(params[:email_contact])

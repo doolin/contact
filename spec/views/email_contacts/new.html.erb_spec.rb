@@ -1,15 +1,14 @@
 require 'spec_helper'
 
 describe "email_contacts/new.html.erb" do
-  
 # A good one to write would be to remove
 # one of the fields, say, "subject" and fail
 # the test.  The error is hard to understand
 # without having had it a few times.  Mention that
-# whenever something is added to the model, the 
-# specs need to be updated as well.  Go into detail 
-# about mock_model and stub_model  
-#=begin  
+# whenever something is added to the model, the
+# specs need to be updated as well.  Go into detail
+# about mock_model and stub_model
+#=begin
   before(:each) do
     assign(:email_contact, stub_model(EmailContact,
       :name => "MyString",
@@ -36,5 +35,4 @@ describe "email_contacts/new.html.erb" do
       assert_select "textarea#email_contact_message", :message => "email_contact[message]"
     end
   end
-  
 end

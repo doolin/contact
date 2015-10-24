@@ -1,8 +1,8 @@
 require 'spec_helper.rb'
 
-# Need to "sign in" before 
+# Need to "sign in" before
 
-describe AdminsController do 
+describe AdminsController do
 
   render_views
 
@@ -11,14 +11,14 @@ describe AdminsController do
 #  end
 
 =begin
-  describe "#sign_in" do 
+  describe "#sign_in" do
 
     it "should be successful" do
       get '/login'
       response.should be_success
-    end   
+    end
 
   end
 =end
 
-end 
+end
