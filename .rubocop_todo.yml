@@ -304,11 +304,7 @@ Style/Tab:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/TrailingBlankLines:
-  Exclude:
-    - 'app/mailers/contact_mailer.rb'
-    - 'config/environments/development.rb'
-    - 'spec/mailers/contact_mailer_spec.rb'
-    - 'spec/models/email_contact_spec.rb'
+  Enabled: true
 
 # Offense count: 1
 # Cop supports --auto-correct.

@@ -23,4 +23,3 @@ describe ContactMailer do
     end
   end
 end
-
