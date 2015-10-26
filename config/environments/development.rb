@@ -27,7 +27,7 @@ Contact::Application.configure do
     :authentication => :plain,
     :domain => ENV['GMAIL_SMTP_USER'],
     :user_name => ENV['GMAIL_SMTP_USER'],
-    :password => ENV['GMAIL_SMTP_PASSWORD'],
+    :password => ENV['GMAIL_SMTP_PASSWORD']
   }
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

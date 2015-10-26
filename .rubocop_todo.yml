@@ -310,8 +310,7 @@ Style/TrailingBlankLines:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
 Style/TrailingComma:
-  Exclude:
-    - 'config/environments/development.rb'
+  Enabled: true
 
 # Offense count: 54
 # Cop supports --auto-correct.
