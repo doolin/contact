@@ -67,7 +67,7 @@ class EmailContactsController < ApplicationController
         format.html {redirect_to thankyou_path } #{ redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
         format.xml  { render :xml => @email_contact, :status => :created, :location => @email_contact }
 
-	#redirect_to thankyou_path
+  #redirect_to thankyou_path
 
       else
         format.html { render :action => "new" }

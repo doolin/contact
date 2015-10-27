@@ -297,8 +297,7 @@ Style/StringLiterals:
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/Tab:
-  Exclude:
-    - 'app/controllers/email_contacts_controller.rb'
+  Enabled: true
 
 # Offense count: 4
 # Cop supports --auto-correct.
