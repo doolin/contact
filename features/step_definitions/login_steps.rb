@@ -77,7 +77,7 @@ end
 # in the email_contacts list.
 Given /^I click on the email "Delete" link$/ do
   #save_and_open_page
-  click_link("Delete")
+  click_link('Delete')
 #  pending # express the regexp above with the code you wish you had
 end
 

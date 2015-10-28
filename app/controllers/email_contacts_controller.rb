@@ -70,7 +70,7 @@ class EmailContactsController < ApplicationController
   #redirect_to thankyou_path
 
       else
-        format.html { render :action => "new" }
+        format.html { render :action => 'new' }
         format.xml  { render :xml => @email_contact.errors, :status => :unprocessable_entity }
       end
     end
@@ -86,14 +86,14 @@ class EmailContactsController < ApplicationController
         format.html { redirect_to(@email_contact, :notice => 'Email contact was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => 'edit' }
         format.xml  { render :xml => @email_contact.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   def thankyou
-    @thanks = "Come back soon!"
+    @thanks = 'Come back soon!'
     #redirect_to thankyou_path
     render('email_contacts/thankyou')
   end

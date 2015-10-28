@@ -12,7 +12,7 @@ module Contact
   class Application < Rails::Application
 
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = 'utf-8'
 
 # From http://www.ruby-forum.com/topic/184533
 # Trying to fix a "stack too deep" issue

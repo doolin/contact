@@ -14,7 +14,7 @@ class ContactMailer < ActionMailer::Base
 
   def daves_copy(user)
     @user = user
-    mail(:to => "david.doolin@gmail.com",
+    mail(:to => 'david.doolin@gmail.com',
          :from => @user.email,
          :subject => "ContactMe email: #{@user.subject}")
   end
@@ -22,7 +22,7 @@ class ContactMailer < ActionMailer::Base
   def contacts_copy(user)
     @user = user
     mail(:to => @user.email,
-         :from => "david.doolin@gmail.com",
+         :from => 'david.doolin@gmail.com',
          :subject => "Copy: #{@user.subject}")
   end
 

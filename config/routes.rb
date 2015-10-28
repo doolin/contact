@@ -10,11 +10,11 @@ Contact::Application.routes.draw do
   root :to => 'email_contacts#new'
 
   # This route is for eliminating the default devise sign up
-  devise_for :admins, :controllers => {:registrations => "admin/registrations"}
+  devise_for :admins, :controllers => {:registrations => 'admin/registrations'}
 
   devise_scope :admin do
-    get "/login" => "devise/sessions#new"
-    get "/logout" => "devise/sessions#destroy"
+    get '/login' => 'devise/sessions#new'
+    get '/logout' => 'devise/sessions#destroy'
   end
 
 end
