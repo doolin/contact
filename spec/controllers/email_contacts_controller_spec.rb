@@ -72,8 +72,8 @@ describe EmailContactsController do
 
     describe 'with valid params' do
       it 'assigns a newly created email_contact as @email_contact' do
-        EmailContact.stub(:new).with({'these' => 'params'}) { mock_email_contact(:save => true) }
-        post :create, :email_contact => {'these' => 'params'}
+        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(:save => true) }
+        post :create, :email_contact => { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
 
@@ -89,8 +89,8 @@ describe EmailContactsController do
 
     describe 'with invalid params' do
       it 'assigns a newly created but unsaved email_contact as @email_contact' do
-        EmailContact.stub(:new).with({'these' => 'params'}) { mock_email_contact(:save => false) }
-        post :create, :email_contact => {'these' => 'params'}
+        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(:save => false) }
+        post :create, :email_contact => { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
 
@@ -109,8 +109,8 @@ describe EmailContactsController do
     describe 'with valid params' do
       it 'updates the requested email_contact' do
         EmailContact.should_receive(:find).with('37') { mock_email_contact }
-        mock_email_contact.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => '37', :email_contact => {'these' => 'params'}
+        mock_email_contact.should_receive(:update_attributes).with({ 'these' => 'params' })
+        put :update, :id => '37', :email_contact => { 'these' => 'params' }
       end
 
       it 'assigns the requested email_contact as @email_contact' do
