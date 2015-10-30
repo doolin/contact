@@ -64,7 +64,7 @@ class EmailContactsController < ApplicationController
         ContactMailer.contacts_copy(@email_contact).deliver
         ContactMailer.daves_copy(@email_contact).deliver
         #format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
-        format.html {redirect_to thankyou_path } #{ redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
+        format.html { redirect_to thankyou_path } #{ redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
         format.xml  { render :xml => @email_contact, :status => :created, :location => @email_contact }
 
   #redirect_to thankyou_path

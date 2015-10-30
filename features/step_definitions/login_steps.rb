@@ -2,7 +2,7 @@
 # From RSpec book, page 267
 Given /^the following email_contacts exist:$/ do |contacts_table|
   # From https://github.com/aslakhellesoy/cucumber/wiki/Step-Argument-Transforms
-  contacts_table.map_headers! {|header| header.downcase.to_sym }
+  contacts_table.map_headers! { |header| header.downcase.to_sym }
   contacts_table.hashes.each do |hash|
     EmailContact.create!(hash)
   end
