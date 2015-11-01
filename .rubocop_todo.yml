@@ -191,17 +191,7 @@ Style/IndentationWidth:
 # Offense count: 28
 # Cop supports --auto-correct.
 Style/LeadingCommentSpace:
-  Exclude:
-    - 'app/controllers/admins_controller.rb'
-    - 'app/controllers/email_contacts_controller.rb'
-    - 'app/mailers/contact_mailer.rb'
-    - 'config/application.rb'
-    - 'config/routes.rb'
-    - 'features/step_definitions/login_steps.rb'
-    - 'features/step_definitions/sendmessage_steps.rb'
-    - 'features/support/env.rb'
-    - 'spec/controllers/email_contacts_controller_spec.rb'
-    - 'spec/mailers/contact_mailer_spec.rb'
+  Enabled: true
 
 # Offense count: 2
 # Cop supports --auto-correct.

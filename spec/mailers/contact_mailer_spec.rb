@@ -15,7 +15,7 @@ describe ContactMailer do
       # The from field is overriden by Google, let's
       # test it here so that it will work when outgoing
       # SMTP server is changed to something else.
-      #mail.from.should eq([@email_contact.email])
+      # mail.from.should eq([@email_contact.email])
     end
 
     it 'renders the body' do

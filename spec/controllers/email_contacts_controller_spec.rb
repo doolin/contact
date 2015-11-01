@@ -33,7 +33,7 @@ describe EmailContactsController do
 
   describe 'GET index' do
     it 'assigns all email_contacts as @email_contacts' do
-      #EmailContact.stub(:all) { [mock_email_contact] }
+      # EmailContact.stub(:all) { [mock_email_contact] }
       EmailContact.stub(:all) { mock_email_contact }
       get :index
       assigns(:email_contacts).should eq(@mock_email_contact)
@@ -45,7 +45,7 @@ describe EmailContactsController do
     it 'assigns the requested email_contact as @email_contact' do
       EmailContact.stub(:find).with('37') { mock_email_contact }
       get :show, :id => '37'
-      #assigns(:email_contact).should be(mock_email_contact)
+      # assigns(:email_contact).should be(mock_email_contact)
       assigns(:email_contact).should == @mock_email_contact
     end
   end

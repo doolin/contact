@@ -2,13 +2,13 @@
 
 Given /^I'm on the message sending form page$/ do
   visit('/')
-  #pending # express the regexp above with the code you wish you had
+  # pending # express the regexp above with the code you wish you had
 end
 
 
-#Given /^there's a message sending form web page$/ do
+# Given /^there's a message sending form web page$/ do
 #  pending # express the regexp above with the code you wish you had
-#end
+# end
 
 When /^the user sends a message$/ do
   pending # express the regexp above with the code you wish you had
@@ -18,10 +18,10 @@ Then /^I should get email$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-#Given /^I fill in the "([^"]*)" field$/ do |value|
+# Given /^I fill in the "([^"]*)" field$/ do |value|
 #  fill_in(field, :with => value)
 #  #pending # express the regexp above with the code you wish you had
-#end
+# end
 
 Then /^Dave should get my email$/ do
   pending # express the regexp above with the code you wish you had

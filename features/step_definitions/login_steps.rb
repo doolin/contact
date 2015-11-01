@@ -46,7 +46,7 @@ Given /^I am an authenticated admin$/ do
   password = 'secretpass'
 
   Given %{I have one admin "#{email}" with password "#{password}" and login "#{login}"}
-  And %{I go to the admin's sign_in page} #And %{I go to login}
+  And %{I go to the admin's sign_in page} # And %{I go to login}
   And %{I fill in "admin_email" with "#{email}"}
   And %{I fill in "admin_password" with "#{password}"}
   And %{I press "Sign in"}
@@ -62,9 +62,9 @@ end
   end
 =end
 
-#Given /^I fill in the "([^"]*)" with "([^"]*)"$/ do |arg1, arg2|
+# Given /^I fill in the "([^"]*)" with "([^"]*)"$/ do |arg1, arg2|
 #  pending # express the regexp above with the code you wish you had
-#end
+# end
 
 # This isn't quite right, should use an already created admin
 # and log that admin in.
@@ -76,7 +76,7 @@ end
 # This is currently failing because there are no emails
 # in the email_contacts list.
 Given /^I click on the email "Delete" link$/ do
-  #save_and_open_page
+  # save_and_open_page
   click_link('Delete')
 #  pending # express the regexp above with the code you wish you had
 end

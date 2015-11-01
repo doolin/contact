@@ -60,14 +60,14 @@ class EmailContactsController < ApplicationController
 
     respond_to do |format|
       if @email_contact.save
-        #ContactMailer.welcome_email(@email_contact).deliver
+        # ContactMailer.welcome_email(@email_contact).deliver
         ContactMailer.contacts_copy(@email_contact).deliver
         ContactMailer.daves_copy(@email_contact).deliver
-        #format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
-        format.html { redirect_to thankyou_path } #{ redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
+        # format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
+        format.html { redirect_to thankyou_path } # { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
         format.xml  { render :xml => @email_contact, :status => :created, :location => @email_contact }
 
-  #redirect_to thankyou_path
+  # redirect_to thankyou_path
 
       else
         format.html { render :action => 'new' }
@@ -94,7 +94,7 @@ class EmailContactsController < ApplicationController
 
   def thankyou
     @thanks = 'Come back soon!'
-    #redirect_to thankyou_path
+    # redirect_to thankyou_path
     render('email_contacts/thankyou')
   end
 

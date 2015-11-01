@@ -2,10 +2,10 @@ Contact::Application.routes.draw do
 
   resources :email_contacts
 
-  #get "email_contacts/thankyou"
+  # get "email_contacts/thankyou"
 
   match '/thankyou', :to => 'email_contacts#thankyou'
-  #match "/admins/sign_up", :to => 'email_contacts#new'
+  # match "/admins/sign_up", :to => 'email_contacts#new'
 
   root :to => 'email_contacts#new'
 

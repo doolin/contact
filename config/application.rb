@@ -2,7 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-#require 'action_mailer'
+# require 'action_mailer'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -16,11 +16,11 @@ module Contact
 
 # From http://www.ruby-forum.com/topic/184533
 # Trying to fix a "stack too deep" issue
-#config.cache_classes = false
-#config.cache_classes = true
+# config.cache_classes = false
+# config.cache_classes = true
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   end
 end
