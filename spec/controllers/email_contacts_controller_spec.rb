@@ -81,7 +81,7 @@ describe EmailContactsController do
       it 'redirects to the created email_contact' do
         EmailContact.stub(:new) { mock_email_contact(:save => true) }
         post :create, :email_contact => {}
-#        response.should redirect_to(email_contact_url(mock_email_contact))
+        #        response.should redirect_to(email_contact_url(mock_email_contact))
         response.should redirect_to(thankyou_path)
       end
     end

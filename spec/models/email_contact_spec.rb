@@ -15,7 +15,7 @@ describe EmailContact do
     EmailContact.create!(@atts)
   end
 
-# Check requirements...  DRY these later
+  # Check requirements...  DRY these later
   it 'should require a name' do
     no_name_email = EmailContact.new(@atts.merge(:name => ''))
     no_name_email.should_not be_valid

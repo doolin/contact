@@ -53,7 +53,7 @@ Given /^I am an authenticated admin$/ do
 end
 
 
-  # This runs, but I don't think it does anything
+# This runs, but I don't think it does anything
 =begin
 
   before(:each) do
@@ -78,7 +78,7 @@ end
 Given /^I click on the email "Delete" link$/ do
   # save_and_open_page
   click_link('Delete')
-#  pending # express the regexp above with the code you wish you had
+  #  pending # express the regexp above with the code you wish you had
 end
 
 Then /^the email is deleted$/ do

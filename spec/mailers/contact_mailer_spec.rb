@@ -7,7 +7,7 @@ describe ContactMailer do
   end
 
   describe 'contact_mailer' do
-#    let(:mail) { ContactMailer.welcome_email(@email_contact) }
+    #    let(:mail) { ContactMailer.welcome_email(@email_contact) }
     let(:mail) { ContactMailer.daves_copy(@email_contact) }
 
     it 'renders the headers' do

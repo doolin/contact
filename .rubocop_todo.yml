@@ -96,15 +96,7 @@ Style/ClosingParenthesisIndentation:
 # Offense count: 14
 # Cop supports --auto-correct.
 Style/CommentIndentation:
-  Exclude:
-    - 'app/controllers/email_contacts_controller.rb'
-    - 'config/application.rb'
-    - 'features/step_definitions/login_steps.rb'
-    - 'spec/controllers/email_contacts_controller_spec.rb'
-    - 'spec/mailers/contact_mailer_spec.rb'
-    - 'spec/models/email_contact_spec.rb'
-    - 'spec/views/email_contacts/index.html.erb_spec.rb'
-    - 'spec/views/email_contacts/new.html.erb_spec.rb'
+  Enabled: true
 
 # Offense count: 16
 # Configuration parameters: Exclude.
