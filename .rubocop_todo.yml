@@ -106,16 +106,7 @@ Style/Documentation:
 # Offense count: 18
 # Cop supports --auto-correct.
 Style/EmptyLines:
-  Exclude:
-    - 'config/environments/development.rb'
-    - 'db/migrate/20101205022110_devise_create_admins.rb'
-    - 'features/step_definitions/login_steps.rb'
-    - 'features/step_definitions/sendmessage_steps.rb'
-    - 'features/step_definitions/web_steps.rb'
-    - 'features/support/env.rb'
-    - 'lib/tasks/cucumber.rake'
-    - 'spec/controllers/email_contacts_controller_spec.rb'
-    - 'spec/views/email_contacts/show.html.erb_spec.rb'
+  Enabled: true
 
 # Offense count: 19
 # Cop supports --auto-correct.

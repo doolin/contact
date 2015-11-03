@@ -8,8 +8,6 @@ Given /^the following email_contacts exist:$/ do |contacts_table|
   end
 end
 
-
-
 # From the Devise wiki:
 Given /^I am not authenticated$/ do
   visit('/admins/sign_out') # ensure that at least
@@ -52,7 +50,6 @@ Given /^I am an authenticated admin$/ do
   And %{I press "Sign in"}
 end
 
-
 # This runs, but I don't think it does anything
 =begin
 
@@ -70,8 +67,6 @@ end
 # and log that admin in.
 Then /^I should land on the "Send me an email!" page$/ do
 end
-
-
 
 # This is currently failing because there are no emails
 # in the email_contacts list.

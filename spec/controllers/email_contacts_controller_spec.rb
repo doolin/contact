@@ -30,7 +30,6 @@ describe EmailContactsController do
     end
   end
 
-
   describe 'GET index' do
     it 'assigns all email_contacts as @email_contacts' do
       # EmailContact.stub(:all) { [mock_email_contact] }
@@ -40,7 +39,6 @@ describe EmailContactsController do
     end
   end
 
-
   describe 'GET show' do
     it 'assigns the requested email_contact as @email_contact' do
       EmailContact.stub(:find).with('37') { mock_email_contact }
@@ -49,8 +47,6 @@ describe EmailContactsController do
       assigns(:email_contact).should == @mock_email_contact
     end
   end
-
-
 
   describe 'GET new' do
     it 'assigns a new email_contact as @email_contact' do
@@ -77,7 +73,6 @@ describe EmailContactsController do
         assigns(:email_contact).should be(mock_email_contact)
       end
 
-
       it 'redirects to the created email_contact' do
         EmailContact.stub(:new) { mock_email_contact(:save => true) }
         post :create, :email_contact => {}
@@ -85,7 +80,6 @@ describe EmailContactsController do
         response.should redirect_to(thankyou_path)
       end
     end
-
 
     describe 'with invalid params' do
       it 'assigns a newly created but unsaved email_contact as @email_contact' do
@@ -102,7 +96,6 @@ describe EmailContactsController do
     end
 
   end
-
 
   describe 'PUT update' do
 
@@ -155,6 +148,5 @@ describe EmailContactsController do
       response.should redirect_to(email_contacts_url)
     end
   end
-
 
 end

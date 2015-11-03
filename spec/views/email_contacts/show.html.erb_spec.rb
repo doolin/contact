@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 ## This all should work but doesn't.
 describe 'email_contacts/show.html.erb' do
 

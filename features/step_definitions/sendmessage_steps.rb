@@ -5,7 +5,6 @@ Given /^I'm on the message sending form page$/ do
   # pending # express the regexp above with the code you wish you had
 end
 
-
 # Given /^there's a message sending form web page$/ do
 #  pending # express the regexp above with the code you wish you had
 # end

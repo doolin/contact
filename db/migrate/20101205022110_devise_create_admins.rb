@@ -10,7 +10,6 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
 
-
       t.timestamps
     end
 
