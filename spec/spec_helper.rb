@@ -8,12 +8,10 @@ require 'email_spec'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
-=begin
-Spec::Runner.configure do |config|
-  config.include(EmailSpec::Helpers)
-  config.include(EmailSpec::Matchers)
-end
-=end
+# Spec::Runner.configure do |config|
+#   config.include(EmailSpec::Helpers)
+#   config.include(EmailSpec::Matchers)
+# end
 
 RSpec.configure do |config|
   config.mock_with :rspec

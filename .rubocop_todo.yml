@@ -65,12 +65,7 @@ Style/AlignParameters:
 # Offense count: 5
 # Cop supports --auto-correct.
 Style/BlockComments:
-  Exclude:
-    - 'app/controllers/registrations_controller.rb'
-    - 'features/step_definitions/login_steps.rb'
-    - 'spec/controllers/admins_controller_spec.rb'
-    - 'spec/helpers/email_contacts_helper_spec.rb'
-    - 'spec/spec_helper.rb'
+  Enabled: true
 
 # Offense count: 3
 # Cop supports --auto-correct.

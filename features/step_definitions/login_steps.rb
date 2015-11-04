@@ -51,13 +51,11 @@ Given /^I am an authenticated admin$/ do
 end
 
 # This runs, but I don't think it does anything
-=begin
-
-  before(:each) do
-    @admin = Admin.create("13")
-    sign_in(:admin,@admin)
-  end
-=end
+#
+#   before(:each) do
+#     @admin = Admin.create("13")
+#     sign_in(:admin,@admin)
+#   end
 
 # Given /^I fill in the "([^"]*)" with "([^"]*)"$/ do |arg1, arg2|
 #  pending # express the regexp above with the code you wish you had
