@@ -62,11 +62,6 @@ Style/AlignParameters:
     - 'spec/views/email_contacts/show.html.erb_spec.rb'
     - 'spec/views/email_contacts/thankyou.html.erb_spec.rb'
 
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/BlockComments:
-  Enabled: true
-
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -88,20 +83,10 @@ Style/ClosingParenthesisIndentation:
     - 'spec/views/email_contacts/new.html.erb_spec.rb'
     - 'spec/views/email_contacts/show.html.erb_spec.rb'
 
-# Offense count: 14
-# Cop supports --auto-correct.
-Style/CommentIndentation:
-  Enabled: true
-
 # Offense count: 16
 # Configuration parameters: Exclude.
 Style/Documentation:
   Enabled: false
-
-# Offense count: 18
-# Cop supports --auto-correct.
-Style/EmptyLines:
-  Enabled: true
 
 # Offense count: 19
 # Cop supports --auto-correct.
@@ -144,12 +129,6 @@ Style/ExtraSpacing:
     - 'config/environments/test.rb'
     - 'db/schema.rb'
     - 'script/rails'
-
-# Offense count: 179
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
-Style/HashSyntax:
-  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -237,49 +216,3 @@ Style/SpaceAfterComma:
 # Configuration parameters: SupportedStyles.
 Style/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/SpaceBeforeBlockBraces:
-  Enabled: true
-
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
-Style/SpaceInsideBlockBraces:
-  Enabled: true
-
-# Offense count: 23
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
-Style/SpaceInsideHashLiteralBraces:
-  Enabled: true
-
-# Offense count: 221
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/StringLiterals:
-  Enabled: true
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/Tab:
-  Enabled: true
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/TrailingBlankLines:
-  Enabled: true
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
-Style/TrailingComma:
-  Enabled: true
-
-# Offense count: 54
-# Cop supports --auto-correct.
-Style/TrailingWhitespace:
-  Enabled: true

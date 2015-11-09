@@ -5,9 +5,9 @@ describe 'email_contacts/show.html.erb' do
 
   before(:each) do
     @email_contact = assign(:email_contact, stub_model(EmailContact,
-      :name => 'Name',
-      :email => 'Email',
-      :message => 'Message'
+      name: 'Name',
+      email: 'Email',
+      message: 'Message'
     ))
   end
 

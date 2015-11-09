@@ -8,7 +8,7 @@ class EmailContactsController < ApplicationController
       @email_contacts = EmailContact.all
       respond_to do |format|
         format.html # index.html.erb
-        format.xml  { render :xml => @email_contacts }
+        format.xml  { render xml: @email_contacts }
       end
     else
       redirect_to root_path
@@ -25,7 +25,7 @@ class EmailContactsController < ApplicationController
       @email_contact = EmailContact.find(params[:id])
       respond_to do |format|
         format.html # show.html.erb
-        format.xml  { render :xml => @email_contact }
+        format.xml  { render xml: @email_contact }
       end
     else
       redirect_to root_path
@@ -39,7 +39,7 @@ class EmailContactsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @email_contact }
+      format.xml  { render xml: @email_contact }
     end
   end
 
@@ -65,13 +65,13 @@ class EmailContactsController < ApplicationController
         ContactMailer.daves_copy(@email_contact).deliver
         # format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
         format.html { redirect_to thankyou_path } # { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
-        format.xml  { render :xml => @email_contact, :status => :created, :location => @email_contact }
+        format.xml  { render xml: @email_contact, status: :created, location: @email_contact }
 
       # redirect_to thankyou_path
 
       else
-        format.html { render :action => 'new' }
-        format.xml  { render :xml => @email_contact.errors, :status => :unprocessable_entity }
+        format.html { render action: 'new' }
+        format.xml  { render xml: @email_contact.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -83,11 +83,11 @@ class EmailContactsController < ApplicationController
 
     respond_to do |format|
       if @email_contact.update_attributes(params[:email_contact])
-        format.html { redirect_to(@email_contact, :notice => 'Email contact was successfully updated.') }
+        format.html { redirect_to(@email_contact, notice: 'Email contact was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => 'edit' }
-        format.xml  { render :xml => @email_contact.errors, :status => :unprocessable_entity }
+        format.html { render action: 'edit' }
+        format.xml  { render xml: @email_contact.errors, status: :unprocessable_entity }
       end
     end
   end

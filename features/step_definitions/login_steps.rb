@@ -14,16 +14,16 @@ Given /^I am not authenticated$/ do
 end
 
 Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)" and login "([^\"]*)"$/ do |email, password, login|
-  User.new(:email => email,
-           :login => login,
-           :password => password,
-           :password_confirmation => password).save!
+  User.new(email: email,
+           login: login,
+           password: password,
+           password_confirmation: password).save!
 end
 
 Given /^I have one\s+admin "([^\"]*)" with password "([^\"]*)" and login "([^\"]*)"$/ do |email, password, login|
-  Admin.new(:email => email,
-           :password => password,
-           :password_confirmation => password).save!
+  Admin.new(email: email,
+           password: password,
+           password_confirmation: password).save!
 end
 
 Given /^I am a new, authenticated user$/ do

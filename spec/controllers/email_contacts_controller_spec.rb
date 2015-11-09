@@ -26,7 +26,7 @@ describe EmailContactsController do
   describe 'GET thankyou' do
     xit 'should have Thanks in the response' do
       get :thankyou
-      response.should have_selector('p', :text => 'Thanks')
+      response.should have_selector('p', text: 'Thanks')
     end
   end
 
@@ -42,7 +42,7 @@ describe EmailContactsController do
   describe 'GET show' do
     it 'assigns the requested email_contact as @email_contact' do
       EmailContact.stub(:find).with('37') { mock_email_contact }
-      get :show, :id => '37'
+      get :show, id: '37'
       # assigns(:email_contact).should be(mock_email_contact)
       assigns(:email_contact).should == @mock_email_contact
     end
@@ -59,7 +59,7 @@ describe EmailContactsController do
   describe 'GET edit' do
     it 'assigns the requested email_contact as @email_contact' do
       EmailContact.stub(:find).with('37') { mock_email_contact }
-      get :edit, :id => '37'
+      get :edit, id: '37'
       assigns(:email_contact).should be(@mock_email_contact)
     end
   end
@@ -68,14 +68,14 @@ describe EmailContactsController do
 
     describe 'with valid params' do
       it 'assigns a newly created email_contact as @email_contact' do
-        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(:save => true) }
-        post :create, :email_contact => { 'these' => 'params' }
+        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(save: true) }
+        post :create, email_contact: { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
 
       it 'redirects to the created email_contact' do
-        EmailContact.stub(:new) { mock_email_contact(:save => true) }
-        post :create, :email_contact => {}
+        EmailContact.stub(:new) { mock_email_contact(save: true) }
+        post :create, email_contact: {}
         #        response.should redirect_to(email_contact_url(mock_email_contact))
         response.should redirect_to(thankyou_path)
       end
@@ -83,14 +83,14 @@ describe EmailContactsController do
 
     describe 'with invalid params' do
       it 'assigns a newly created but unsaved email_contact as @email_contact' do
-        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(:save => false) }
-        post :create, :email_contact => { 'these' => 'params' }
+        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(save: false) }
+        post :create, email_contact: { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
 
       it "re-renders the 'new' template" do
-        EmailContact.stub(:new) { mock_email_contact(:save => false) }
-        post :create, :email_contact => {}
+        EmailContact.stub(:new) { mock_email_contact(save: false) }
+        post :create, email_contact: {}
         response.should render_template('new')
       end
     end
@@ -103,32 +103,32 @@ describe EmailContactsController do
       it 'updates the requested email_contact' do
         EmailContact.should_receive(:find).with('37') { mock_email_contact }
         mock_email_contact.should_receive(:update_attributes).with({ 'these' => 'params' })
-        put :update, :id => '37', :email_contact => { 'these' => 'params' }
+        put :update, id: '37', email_contact: { 'these' => 'params' }
       end
 
       it 'assigns the requested email_contact as @email_contact' do
-        EmailContact.stub(:find) { mock_email_contact(:update_attributes => true) }
-        put :update, :id => '1'
+        EmailContact.stub(:find) { mock_email_contact(update_attributes: true) }
+        put :update, id: '1'
         assigns(:email_contact).should be(mock_email_contact)
       end
 
       it 'redirects to the email_contact' do
-        EmailContact.stub(:find) { mock_email_contact(:update_attributes => true) }
-        put :update, :id => '1'
+        EmailContact.stub(:find) { mock_email_contact(update_attributes: true) }
+        put :update, id: '1'
         response.should redirect_to(email_contact_url(mock_email_contact))
       end
     end
 
     describe 'with invalid params' do
       it 'assigns the email_contact as @email_contact' do
-        EmailContact.stub(:find) { mock_email_contact(:update_attributes => false) }
-        put :update, :id => '1'
+        EmailContact.stub(:find) { mock_email_contact(update_attributes: false) }
+        put :update, id: '1'
         assigns(:email_contact).should be(mock_email_contact)
       end
 
       it "re-renders the 'edit' template" do
-        EmailContact.stub(:find) { mock_email_contact(:update_attributes => false) }
-        put :update, :id => '1'
+        EmailContact.stub(:find) { mock_email_contact(update_attributes: false) }
+        put :update, id: '1'
         response.should render_template('edit')
       end
     end
@@ -139,12 +139,12 @@ describe EmailContactsController do
     it 'destroys the requested email_contact' do
       EmailContact.should_receive(:find).with('37') { mock_email_contact }
       mock_email_contact.should_receive(:destroy)
-      delete :destroy, :id => '37'
+      delete :destroy, id: '37'
     end
 
     it 'redirects to the email_contacts list' do
       EmailContact.stub(:find) { mock_email_contact }
-      delete :destroy, :id => '1'
+      delete :destroy, id: '1'
       response.should redirect_to(email_contacts_url)
     end
   end
