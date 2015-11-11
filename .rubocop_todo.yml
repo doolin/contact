@@ -14,12 +14,6 @@ Lint/AmbiguousRegexpLiteral:
     - 'features/step_definitions/web_steps.rb'
 
 # Offense count: 1
-# Cop supports --auto-correct.
-Lint/BlockAlignment:
-  Exclude:
-    - 'spec/views/email_contacts/new.html.erb_spec.rb'
-
-# Offense count: 1
 Lint/Debugger:
   Exclude:
     - 'features/step_definitions/web_steps.rb'
