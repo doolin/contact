@@ -27,7 +27,7 @@ Lint/UnusedBlockArgument:
 
 # Offense count: 2
 Metrics/AbcSize:
-  Max: 20
+  Max: 17
 
 # Offense count: 100
 # Configuration parameters: AllowURI, URISchemes.

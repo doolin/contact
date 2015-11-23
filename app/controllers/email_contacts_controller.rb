@@ -1,9 +1,5 @@
 class EmailContactsController < ApplicationController
-
-  # GET /email_contacts
-  # GET /email_contacts.xml
   def index
-
     if admin_signed_in?
       @email_contacts = EmailContact.all
       respond_to do |format|
@@ -15,8 +11,6 @@ class EmailContactsController < ApplicationController
     end
   end
 
-  # GET /email_contacts/1
-  # GET /email_contacts/1.xml
   def show
 
     # TODO: add authorization here.  This should be redundant,
@@ -24,45 +18,34 @@ class EmailContactsController < ApplicationController
     if admin_signed_in?
       @email_contact = EmailContact.find(params[:id])
       respond_to do |format|
-        format.html # show.html.erb
-        format.xml  { render xml: @email_contact }
+        format.html
+        format.xml { render xml: @email_contact }
       end
     else
       redirect_to root_path
     end
   end
 
-  # GET /email_contacts/new
-  # GET /email_contacts/new.xml
   def new
     @email_contact = EmailContact.new
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render xml: @email_contact }
+      format.html
+      format.xml { render xml: @email_contact }
     end
   end
 
-  # GET /email_contacts/1/edit
   def edit
-     # disable editing
-     redirect_to email_contacts_path
-    #    @email_contact = EmailContact.find(params[:id])
+    redirect_to email_contacts_path
+    # @email_contact = EmailContact.find(params[:id])
   end
 
-  # POST /email_contacts
-  # POST /email_contacts.xml
-  # TODO: something in here is broken on Heroku.
-  # Could be a write onto their file system.
-  # Could be something to do with the gmail plugin.
   def create
     @email_contact = EmailContact.new(params[:email_contact])
 
     respond_to do |format|
       if @email_contact.save
-        # ContactMailer.welcome_email(@email_contact).deliver
-        ContactMailer.contacts_copy(@email_contact).deliver
-        ContactMailer.daves_copy(@email_contact).deliver
+        deliver
         # format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
         format.html { redirect_to thankyou_path } # { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
         format.xml  { render xml: @email_contact, status: :created, location: @email_contact }
@@ -76,8 +59,6 @@ class EmailContactsController < ApplicationController
     end
   end
 
-  # PUT /email_contacts/1
-  # PUT /email_contacts/1.xml
   def update
     @email_contact = EmailContact.find(params[:id])
 
@@ -94,12 +75,9 @@ class EmailContactsController < ApplicationController
 
   def thankyou
     @thanks = 'Come back soon!'
-    # redirect_to thankyou_path
     render('email_contacts/thankyou')
   end
 
-  # DELETE /email_contacts/1
-  # DELETE /email_contacts/1.xml
   # TODO: Add authentication so users not signed
   #       cannot delete.
   def destroy
@@ -110,5 +88,13 @@ class EmailContactsController < ApplicationController
       format.html { redirect_to(email_contacts_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+
+  def deliver
+    # ContactMailer.welcome_email(@email_contact).deliver
+    ContactMailer.contacts_copy(@email_contact).deliver
+    ContactMailer.daves_copy(@email_contact).deliver
   end
 end
