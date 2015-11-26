@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'email_contacts/new.html.erb' do
+describe 'email_contacts/new' do
   # A good one to write would be to remove
   # one of the fields, say, "subject" and fail
   # the test.  The error is hard to understand
@@ -27,12 +27,12 @@ describe 'email_contacts/new.html.erb' do
   it 'renders new email_contact form' do
     render
 
-   # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
-   assert_select 'form', action: email_contacts_path, method: 'post' do
-     #    assert_select "form", :action => root_path, :method => "post" do
-     assert_select 'input#email_contact_name', name: 'email_contact[name]'
+    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
+    assert_select 'form', action: email_contacts_path, method: 'post' do
+      # assert_select "form", :action => root_path, :method => "post" do
+      assert_select 'input#email_contact_name', name: 'email_contact[name]'
       assert_select 'input#email_contact_email', email: 'email_contact[email]'
       assert_select 'textarea#email_contact_message', message: 'email_contact[message]'
-   end
+    end
   end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'email_contacts/thankyou.html.erb' do
+describe 'email_contacts/thankyou' do
 
   before(:each) do
     assign(:email_contacts, mock_model(EmailContact,
@@ -19,5 +19,4 @@ describe 'email_contacts/thankyou.html.erb' do
     render
     rendered.should have_selector('p', text: 'Thanks')
   end
-
 end

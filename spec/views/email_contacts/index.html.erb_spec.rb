@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'email_contacts/index.html.erb' do
+describe 'email_contacts/index' do
 
   before(:each) do
     assign(:email_contacts, [
@@ -25,14 +25,10 @@ describe 'email_contacts/index.html.erb' do
     render
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select 'tr>td', text: 'Name'.to_s, count: 2
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select 'tr>td', text: 'Email'.to_s, count: 2
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select 'tr>td', text: 'Subject'.to_s, count: 2
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select 'tr>td', text: 'Message'.to_s, count: 2
   end
 
   #  it "should link to the home page from the header text"
-
 end
