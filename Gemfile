@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.0'
-gem 'sqlite3-ruby', require: 'sqlite3'
+gem 'rails', '3.2.22'
+gem 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
 
