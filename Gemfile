@@ -18,8 +18,8 @@ end
 group :test do
   gem 'test-unit' # delete later, this is a bug
   gem 'capybara'
-  gem 'rspec'
-  gem 'rspec-rails', '2.6.1'
+  gem 'rspec', '2.99.0'
+  gem 'rspec-rails', '2.99.0'
   gem 'email_spec'
   gem 'factory_girl_rails'
   gem 'launchy'

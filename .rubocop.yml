@@ -1,1 +1,6 @@
 inherit_from: .rubocop_todo.yml
+
+AllCops:
+  # Include common Ruby source files.
+  Exclude:
+    - lib/gmail_smtp/**/*.rb
