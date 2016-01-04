@@ -12,7 +12,6 @@ class EmailContactsController < ApplicationController
   end
 
   def show
-
     # TODO: add authorization here.  This should be redundant,
     # an unauthorized user should never get here.
     if admin_signed_in?

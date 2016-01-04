@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe EmailContactsController do
-
   # See:
   # https://github.com/plataformatec/devise
   # http://rdoc.info/github/plataformatec/devise/master/Devise/TestHelpers
@@ -12,7 +11,7 @@ describe EmailContactsController do
 
   before(:each) do
     @admin = Admin.create(password: '13')
-    sign_in(:admin,@admin)
+    sign_in(:admin, @admin)
   end
 
   def mock_email_contact(stubs={})
@@ -65,10 +64,9 @@ describe EmailContactsController do
   end
 
   describe 'POST create' do
-
     describe 'with valid params' do
       it 'assigns a newly created email_contact as @email_contact' do
-        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(save: true) }
+        EmailContact.stub(:new).with('these' => 'params') { mock_email_contact(save: true) }
         post :create, email_contact: { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
@@ -83,7 +81,7 @@ describe EmailContactsController do
 
     describe 'with invalid params' do
       it 'assigns a newly created but unsaved email_contact as @email_contact' do
-        EmailContact.stub(:new).with({ 'these' => 'params' }) { mock_email_contact(save: false) }
+        EmailContact.stub(:new).with('these' => 'params') { mock_email_contact(save: false) }
         post :create, email_contact: { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
@@ -94,15 +92,13 @@ describe EmailContactsController do
         response.should render_template('new')
       end
     end
-
   end
 
   describe 'PUT update' do
-
     describe 'with valid params' do
       it 'updates the requested email_contact' do
         EmailContact.should_receive(:find).with('37') { mock_email_contact }
-        mock_email_contact.should_receive(:update_attributes).with({ 'these' => 'params' })
+        mock_email_contact.should_receive(:update_attributes).with('these' => 'params')
         put :update, id: '37', email_contact: { 'these' => 'params' }
       end
 
@@ -132,7 +128,6 @@ describe EmailContactsController do
         response.should render_template('edit')
       end
     end
-
   end
 
   describe 'DELETE destroy' do
@@ -148,5 +143,4 @@ describe EmailContactsController do
       response.should redirect_to(email_contacts_url)
     end
   end
-
 end

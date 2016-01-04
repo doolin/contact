@@ -56,13 +56,6 @@ Style/AlignParameters:
     - 'spec/views/email_contacts/show.html.erb_spec.rb'
     - 'spec/views/email_contacts/thankyou.html.erb_spec.rb'
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/BracesAroundHashParameters:
-  Exclude:
-    - 'spec/controllers/email_contacts_controller_spec.rb'
-
 # Offense count: 1
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/ClassAndModuleChildren:
@@ -90,7 +83,6 @@ Style/EmptyLinesAroundBlockBody:
     - 'config/routes.rb'
     - 'db/schema.rb'
     - 'spec/controllers/admins_controller_spec.rb'
-    - 'spec/controllers/email_contacts_controller_spec.rb'
     - 'spec/mailers/contact_mailer_spec.rb'
     - 'spec/routing/email_contacts_routing_spec.rb'
     - 'spec/views/email_contacts/index.html.erb_spec.rb'
@@ -103,16 +95,9 @@ Style/EmptyLinesAroundBlockBody:
 Style/EmptyLinesAroundClassBody:
   Exclude:
     - 'app/controllers/admins_controller.rb'
-    - 'app/controllers/email_contacts_controller.rb'
     - 'app/mailers/contact_mailer.rb'
     - 'app/models/email_contact.rb'
     - 'config/application.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/EmptyLinesAroundMethodBody:
-  Exclude:
-    - 'app/controllers/email_contacts_controller.rb'
 
 # Offense count: 6
 # Cop supports --auto-correct.
@@ -136,7 +121,6 @@ Style/IndentationConsistency:
 # Configuration parameters: Width.
 Style/IndentationWidth:
   Exclude:
-    - 'app/controllers/email_contacts_controller.rb'
     - 'lib/tasks/cucumber.rake'
 
 # Offense count: 28
@@ -203,7 +187,6 @@ Style/SingleSpaceBeforeFirstArg:
 Style/SpaceAfterComma:
   Exclude:
     - 'features/step_definitions/web_steps.rb'
-    - 'spec/controllers/email_contacts_controller_spec.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
