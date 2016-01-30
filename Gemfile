@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.22'
 gem 'sqlite3'
@@ -8,6 +8,8 @@ gem 'dynamic_form'
 gem 'actionmailer'
 
 gem 'rubocop'
+
+gem 'bundler-audit'
 
 group :cucumber do
   gem 'database_cleaner'
