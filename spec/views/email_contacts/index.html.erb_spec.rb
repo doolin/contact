@@ -3,20 +3,25 @@ require 'spec_helper'
 describe 'email_contacts/index' do
 
   before(:each) do
-    assign(:email_contacts, [
-      mock_model(EmailContact,
-        name: 'Name',
-        email: 'Email',
-        subject: 'Subject',
-        message: 'Message'
-      ),
-      mock_model(EmailContact,
-        name: 'Name',
-        email: 'Email',
-        subject: 'Subject',
-        message: 'Message'
-      )
-    ])
+    assign(
+      :email_contacts,
+      [
+        mock_model(
+          EmailContact,
+          name: 'Name',
+          email: 'Email',
+          subject: 'Subject',
+          message: 'Message'
+        ),
+        mock_model(
+          EmailContact,
+          name: 'Name',
+          email: 'Email',
+          subject: 'Subject',
+          message: 'Message'
+        )
+      ]
+    )
   end
 
   # This is failing due to the test for empty subject field
