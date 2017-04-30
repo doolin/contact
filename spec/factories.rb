@@ -1,4 +1,6 @@
 
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :email_contact do |ec|
     ec.name 'Dave Doolin'

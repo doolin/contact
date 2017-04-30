@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Contact::Application.routes.draw do
 
   resources :email_contacts

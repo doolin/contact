@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContactMailer < ActionMailer::Base
 
   # default :to => "david.doolin@gmail.com"

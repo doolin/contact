@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EmailContactsController < ApplicationController
   def index
     if admin_signed_in?

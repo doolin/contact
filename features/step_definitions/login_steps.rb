@@ -1,4 +1,6 @@
 
+# frozen_string_literal: true
+
 # From RSpec book, page 267
 Given /^the following email_contacts exist:$/ do |contacts_table|
   # From https://github.com/aslakhellesoy/cucumber/wiki/Step-Argument-Transforms

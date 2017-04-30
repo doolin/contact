@@ -1,5 +1,7 @@
 
 
+# frozen_string_literal: true
+
 Given /^I'm on the message sending form page$/ do
   visit('/')
   # pending # express the regexp above with the code you wish you had
