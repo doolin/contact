@@ -16,6 +16,9 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
+
+  config.secret_key = 'f5d48de89ca94286e630acf870b83e5889aaa3fb42a956b926f0886468cc2cc8c2db8ad53d671b5c864ceb345ea386203be839f278518b9e0471b9521be5acaf'
+
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -45,7 +48,7 @@ Devise.setup do |config|
   # from others authentication tools as :clearance_sha1, :authlogic_sha512 (then
   # you should set stretches above to 20 for default behavior) and :restful_authentication_sha1
   # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
-  config.encryptor = :bcrypt
+  # config.encryptor = :bcrypt
 
   # Setup a pepper to generate the encrypted password.
   config.pepper = 'e17b80a4f28b9b2c87ab94a1f06c18e63c8c10907d5ced66d256630bcb874e94fb48d063e7457c7c4c5f56b103da71a3db7bf2c63a3a4c3b970c19854d64292d'
