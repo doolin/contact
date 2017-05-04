@@ -66,22 +66,26 @@ describe EmailContactsController do
   end
 
   describe 'POST create' do
-    describe 'with valid params' do
+    context 'with valid params' do
       it 'assigns a newly created email_contact as @email_contact' do
-        EmailContact.stub(:new).with('these' => 'params') { mock_email_contact(save: true) }
-        post :create, email_contact: { 'these' => 'params' }
+        EmailContact.stub(:new).with('email_contact' => 'foo@bar.com') { mock_email_contact(save: true) }
+        # controller.stub(:deliver)
+        allow(controller).to receive(:deliver)
+        post :create, email_contact: { email_contact: 'foo@bar.com' }
+        # post :create, email_contact: 'foo@bar.com'
         assigns(:email_contact).should be(mock_email_contact)
       end
 
       it 'redirects to the created email_contact' do
         EmailContact.stub(:new) { mock_email_contact(save: true) }
+        allow(controller).to receive(:deliver)
         post :create, email_contact: {}
         #        response.should redirect_to(email_contact_url(mock_email_contact))
         response.should redirect_to(thankyou_path)
       end
     end
 
-    describe 'with invalid params' do
+    context 'with invalid params' do
       xit 'assigns a newly created but unsaved email_contact as @email_contact' do
         EmailContact.stub(:new).with('these' => 'params') { mock_email_contact(save: false) }
         post :create, email_contact: { 'these' => 'params' }
