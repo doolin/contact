@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.13'
+gem 'rails', '4.1.16'
 gem 'protected_attributes'
 gem 'sqlite3'
 gem 'devise'
