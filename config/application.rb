@@ -1,28 +1,24 @@
-# frozen_string_literal: true
-
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# require 'action_mailer'
-
-# If you have a Gemfile, require the gems listed there, including any gems
+# Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env) if defined?(Bundler)
+Bundler.require(*Rails.groups)
 
 module Contact
   class Application < Rails::Application
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+
+    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    # config.time_zone = 'Central Time (US & Canada)'
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = 'utf-8'
 
-    # From http://www.ruby-forum.com/topic/184533
-    # Trying to fix a "stack too deep" issue
-    # config.cache_classes = false
-    # config.cache_classes = true
-
-    # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   end
 end
