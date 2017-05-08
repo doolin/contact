@@ -7,13 +7,13 @@ describe EmailContactsController do
   # https://github.com/plataformatec/devise
   # http://rdoc.info/github/plataformatec/devise/master/Devise/TestHelpers
   # The TestHelpers create sign_in/sign_out capability.
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   render_views
 
   before(:each) do
     @admin = Admin.create(password: '13')
-    sign_in(:admin, @admin)
+    sign_in(@admin, scope: :admin)
   end
 
   def mock_email_contact(stubs={})
