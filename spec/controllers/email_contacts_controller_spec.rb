@@ -25,9 +25,9 @@ describe EmailContactsController do
   # This is really a view spec, adding the message to the thankyou
   # page would be tested here.
   describe 'GET thankyou' do
-    xit 'should have Thanks in the response' do
+    it 'displays Thanks in the response' do
       get :thankyou
-      response.should have_selector('p', text: 'Thanks')
+      expect(response.body).to have_selector('p', text: 'Thanks')
     end
   end
 
@@ -86,13 +86,13 @@ describe EmailContactsController do
     end
 
     context 'with invalid params' do
-      xit 'assigns a newly created but unsaved email_contact as @email_contact' do
+      it 'assigns a newly created but unsaved email_contact as @email_contact' do
         EmailContact.stub(:new).with('these' => 'params') { mock_email_contact(save: false) }
         post :create, email_contact: { 'these' => 'params' }
         assigns(:email_contact).should be(mock_email_contact)
       end
 
-      xit "re-renders the 'new' template" do
+      it "re-renders the 'new' template" do
         EmailContact.stub(:new) { mock_email_contact(save: false) }
         post :create, email_contact: {}
         response.should render_template('new')
@@ -122,13 +122,13 @@ describe EmailContactsController do
     end
 
     describe 'with invalid params' do
-      xit 'assigns the email_contact as @email_contact' do
+      it 'assigns the email_contact as @email_contact' do
         EmailContact.stub(:find) { mock_email_contact(update_attributes: false) }
         put :update, id: '1'
         assigns(:email_contact).should be(mock_email_contact)
       end
 
-      xit "re-renders the 'edit' template" do
+      it "re-renders the 'edit' template" do
         EmailContact.stub(:find) { mock_email_contact(update_attributes: false) }
         put :update, id: '1'
         response.should render_template('edit')
