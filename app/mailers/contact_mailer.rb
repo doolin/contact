@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ContactMailer < ActionMailer::Base
-
   # default :to => "david.doolin@gmail.com"
 
   # TODO: Add URL to emails, then delete welcome_email method
@@ -27,5 +26,4 @@ class ContactMailer < ActionMailer::Base
          from: 'david.doolin@gmail.com',
          subject: "Copy: #{@user.subject}")
   end
-
 end

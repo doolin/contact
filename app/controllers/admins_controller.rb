@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class AdminsController < ApplicationController
-
   def new
     # redirect_to root_path
   end
@@ -16,5 +15,4 @@ class AdminsController < ApplicationController
 #    redirect_to email_contacts
   end
 =end
-
 end

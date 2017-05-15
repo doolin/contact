@@ -4,7 +4,7 @@ require 'spec_helper'
 
 # describe EmailContactsController do
 describe 'routes for email contacts controller' do
-  describe 'routing', :type => :routing do
+  describe 'routing', type: :routing do
     it 'recognizes and generates #index' do
       expect(get: '/email_contacts').to route_to(controller: 'email_contacts', action: 'index')
     end
