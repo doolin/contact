@@ -2,8 +2,9 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.8'
-gem 'protected_attributes'
+gem 'rails', '5.0.3'
+gem 'rails-controller-testing'
+# gem 'protected_attributes'
 gem 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
@@ -26,8 +27,7 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'test-unit' # delete later, this is a bug
   gem 'capybara'
-  gem 'rspec', '2.99.0'
-  gem 'rspec-rails', '2.99.0'
+  gem 'rspec-rails'
   gem 'email_spec'
   gem 'factory_girl_rails'
   gem 'launchy'
