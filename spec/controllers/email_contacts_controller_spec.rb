@@ -105,17 +105,20 @@ describe EmailContactsController do
       it 'updates the requested email_contact' do
         EmailContact.should_receive(:find).with('37') { mock_email_contact }
         mock_email_contact.should_receive(:update_attributes).with('these' => 'params')
+        allow(mock_email_contact).to receive(:to_str).and_return('foo')
         put :update, id: '37', email_contact: { 'these' => 'params' }
       end
 
       it 'assigns the requested email_contact as @email_contact' do
         EmailContact.stub(:find) { mock_email_contact(update_attributes: true) }
+        allow(mock_email_contact).to receive(:to_str).and_return('foo')
         put :update, id: '1'
         assigns(:email_contact).should be(mock_email_contact)
       end
 
       it 'redirects to the email_contact' do
         EmailContact.stub(:find) { mock_email_contact(update_attributes: true) }
+        allow(mock_email_contact).to receive(:to_str).and_return('foo')
         put :update, id: '1'
         response.should redirect_to(email_contact_url(mock_email_contact))
       end
