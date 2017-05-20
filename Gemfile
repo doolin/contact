@@ -2,9 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.3'
-gem 'rails-controller-testing'
-# gem 'protected_attributes'
+gem 'rails', '5.1.1'
 gem 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
