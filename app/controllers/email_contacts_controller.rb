@@ -41,8 +41,12 @@ class EmailContactsController < ApplicationController
     # @email_contact = EmailContact.find(params[:id])
   end
 
+  def permitted_params
+    params.require(:email_contact).permit(:email, :subject, :message, :name)
+  end
+
   def create
-    @email_contact = EmailContact.new(params[:email_contact])
+    @email_contact = EmailContact.new(permitted_params)
 
     respond_to do |format|
       if @email_contact.save
@@ -64,7 +68,8 @@ class EmailContactsController < ApplicationController
     @email_contact = EmailContact.find(params[:id])
 
     respond_to do |format|
-      if @email_contact.update_attributes(params[:email_contact])
+      # if @email_contact.update_attributes(params[:email_contact])
+      if @email_contact.update_attributes(permitted_params)
         format.html { redirect_to(@email_contact, notice: 'Email contact was successfully updated.') }
         format.xml  { head :ok }
       else
