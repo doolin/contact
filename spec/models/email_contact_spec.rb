@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 require 'spec_helper'
@@ -13,33 +12,34 @@ describe EmailContact do
     }
   end
 
-  it 'should create a new instance given valid attributes' do
+  it 'creates a new instance given valid attributes' do
     EmailContact.create!(@atts)
   end
 
-  # Check requirements...  DRY these later
-  it 'should require a name' do
-    no_name_email = EmailContact.new(@atts.merge(name: ''))
-    no_name_email.should_not be_valid
-  end
+  context 'validation' do
+    it 'requires a name' do
+      no_name_email = EmailContact.new(@atts.merge(name: ''))
+      expect(no_name_email).not_to be_valid
+    end
 
-  it 'should require an email' do
-    no_email_email = EmailContact.new(@atts.merge(email: ''))
-    no_email_email.should_not be_valid
-  end
+    it 'requires an email' do
+      no_email_email = EmailContact.new(@atts.merge(email: ''))
+      expect(no_email_email).not_to be_valid
+    end
 
-  it 'should require a subject' do
-    no_subject_email = EmailContact.new(@atts.merge(subject: ''))
-    no_subject_email.should_not be_valid
-  end
+    it 'requires a subject' do
+      no_subject_email = EmailContact.new(@atts.merge(subject: ''))
+      expect(no_subject_email).not_to be_valid
+    end
 
-  it 'should require a message' do
-    no_message_email = EmailContact.new(@atts.merge(message: ''))
-    no_message_email.should_not be_valid
-  end
+    it 'requires a message' do
+      no_message_email = EmailContact.new(@atts.merge(message: ''))
+      expect(no_message_email).not_to be_valid
+    end
 
-  it 'should require a valid email' do
-    no_valid_email_email = EmailContact.new(@atts.merge(email: 'foo le bar@barlefoo dot net'))
-    no_valid_email_email.should_not be_valid
+    it 'requires a valid email' do
+      no_valid_email_email = EmailContact.new(@atts.merge(email: 'foo le bar@barlefoo dot net'))
+      expect(no_valid_email_email).not_to be_valid
+    end
   end
 end

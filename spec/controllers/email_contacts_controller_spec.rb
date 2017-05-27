@@ -104,7 +104,7 @@ describe EmailContactsController do
         end.to change(EmailContact, :count).by(0)
       end
 
-      it "responds with :ok" do
+      it 'responds with :ok' do
         post :create, params: { email_contact: attrs }
         expect(response).to have_http_status(:ok)
       end
@@ -147,7 +147,7 @@ describe EmailContactsController do
         allow(EmailContact).to receive(:find) { mock_email_contact(update_attributes: false) }
         put :update, params: { id: mock_email_contact.id, email_contact: attrs }
         # assigns(:email_contact).should be(mock_email_contact)
-         expect(response).to have_http_status(200)
+        expect(response).to have_http_status(200)
       end
 
       xit "re-renders the 'edit' template" do
