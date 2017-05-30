@@ -3,10 +3,6 @@
 require 'spec_helper'
 
 describe EmailContactsController do
-  # See:
-  # https://github.com/plataformatec/devise
-  # http://rdoc.info/github/plataformatec/devise/master/Devise/TestHelpers
-  # The TestHelpers create sign_in/sign_out capability.
   include Devise::Test::ControllerHelpers
 
   render_views
@@ -21,7 +17,6 @@ describe EmailContactsController do
       stubs.each do |k, v|
         allow(email_contact).to receive(k).and_return(v)
       end
-      # email_contact.stub(stubs) unless stubs.empty?
     end
   end
 
@@ -36,29 +31,22 @@ describe EmailContactsController do
 
   describe 'GET index' do
     it 'assigns all email_contacts as @email_contacts' do
-      # EmailContact.stub(:all) { mock_email_contact }
       get :index
       expect(response).to have_http_status(:found)
-      # assigns(:email_contacts).should eq(@mock_email_contact)
     end
   end
 
   describe 'GET show' do
     it 'assigns the requested email_contact as @email_contact' do
-      # EmailContact.stub(:find).with('37') { mock_email_contact }
       get :show, params: { id: '37' }
-      # assigns(:email_contact).should be(mock_email_contact)
       expect(response).to have_http_status(:found)
-      # assigns(:email_contact).should == @mock_email_contact
     end
   end
 
   describe 'GET new' do
     it 'assigns a new email_contact as @email_contact' do
-      # EmailContact.stub(:new) { mock_email_contact }
       get :new
       expect(response).to have_http_status(:ok)
-      # assigns(:email_contact).should be(@mock_email_contact)
     end
   end
 
@@ -90,7 +78,6 @@ describe EmailContactsController do
         EmailContact.stub(:new) { mock_email_contact(save: true) }
         allow(controller).to receive(:deliver)
         post :create, email_contact: {}
-        # response.should redirect_to(email_contact_url(mock_email_contact))
         response.should redirect_to(thankyou_path)
       end
     end
@@ -116,7 +103,6 @@ describe EmailContactsController do
 
     context 'with valid params' do
       it 'updates the requested email_contact' do
-        # EmailContact.should_receive(:find) { mock_email_contact }
         allow(EmailContact).to receive(:find) { mock_email_contact }
         allow(mock_email_contact).to receive(:to_str).and_return('foo')
         put :update, params: { id: mock_email_contact.id, email_contact: attrs }
@@ -125,15 +111,12 @@ describe EmailContactsController do
       end
 
       xit 'assigns the requested email_contact as @email_contact' do
-        # EmailContact.stub(:find) { mock_email_contact(update_attributes: true) }
         allow(EmailContact).to receive(:find) { mock_email_contact(update_attributes: true) }
         allow(mock_email_contact).to receive(:to_str).and_return('foo')
         put :update, params: { id: mock_email_contact.id, email_contact: attrs }
-        # assigns(:email_contact).should be(mock_email_contact)
       end
 
       it 'redirects to the email_contact' do
-        # EmailContact.stub(:find) { mock_email_contact(update_attributes: true) }
         allow(EmailContact).to receive(:find) { mock_email_contact(update_attributes: true) }
         allow(mock_email_contact).to receive(:to_str).and_return('foo')
         put :update, params: { id: mock_email_contact.id, email_contact: attrs }
@@ -143,15 +126,12 @@ describe EmailContactsController do
 
     context 'with invalid params' do
       it 'assigns the email_contact as @email_contact' do
-        # EmailContact.stub(:find) { mock_email_contact(update_attributes: false) }
         allow(EmailContact).to receive(:find) { mock_email_contact(update_attributes: false) }
         put :update, params: { id: mock_email_contact.id, email_contact: attrs }
-        # assigns(:email_contact).should be(mock_email_contact)
         expect(response).to have_http_status(200)
       end
 
       xit "re-renders the 'edit' template" do
-        # EmailContact.stub(:find) { mock_email_contact(update_attributes: false) }
         allow(EmailContact).to receive(:find) { mock_email_contact(update_attributes: false) }
         put :update, params: { id: mock_email_contact.id, email_contact: attrs }
         response.should render_template('edit')

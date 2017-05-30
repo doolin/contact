@@ -14,11 +14,11 @@ describe 'email_contacts/thankyou' do
 
   it 'should have Thanks' do
     render
-    rendered.should have_selector('p', text: 'Thanks')
+    expect(rendered).to have_selector('p', text: 'Thanks')
   end
 
   it 'should have email message' do
     render
-    rendered.should have_selector('p', text: 'Thanks')
+    expect(rendered).to have_selector('p', text: 'Thanks')
   end
 end

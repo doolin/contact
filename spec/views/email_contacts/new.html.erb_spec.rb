@@ -21,9 +21,9 @@ describe 'email_contacts/new' do
   end
   #=end
 
-  it 'should have Send' do
+  it 'Send header' do
     render
-    rendered.should have_selector('h2', text: 'Send')
+    expect(rendered).to have_selector('h2', text: 'Send')
   end
 
   it 'renders new email_contact form' do
