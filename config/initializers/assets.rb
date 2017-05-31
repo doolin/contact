@@ -9,3 +9,12 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+# Moved from public/ to get tests to pass
+Rails.application.config.assets.precompile += %w(
+  blueprint/screen.css
+  blueprint/print.css
+  blueprint/ie.css
+  custom.css
+  defaults.js
+)
