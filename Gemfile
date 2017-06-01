@@ -6,12 +6,11 @@ gem 'rails', '5.1.1'
 gem 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
-
-gem 'actionmailer'
+gem 'email_validator'
 
 gem 'rubocop'
-
-# gem 'bundler-audit'
+gem 'bundler-audit'
+gem 'brakeman'
 
 group :development, :test do
   gem 'pry-rails'
@@ -19,11 +18,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-activemodel-mocks'
+  gem 'rspec-activemodel-mocks' # TODO: get rid of this
   gem 'database_cleaner'
   gem 'cucumber'
   gem 'cucumber-rails', require: false
-  gem 'test-unit' # delete later, this is a bug
   gem 'capybara'
   gem 'rspec-rails'
   gem 'email_spec'
