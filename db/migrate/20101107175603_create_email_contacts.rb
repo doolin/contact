@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateEmailContacts < ActiveRecord::Migration
+class CreateEmailContacts < ActiveRecord::Migration[5.1]
   def self.up
     create_table :email_contacts do |t|
       t.string :name
