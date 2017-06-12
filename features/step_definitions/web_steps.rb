@@ -48,6 +48,7 @@ end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
+  # visit path_to('/login')
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|

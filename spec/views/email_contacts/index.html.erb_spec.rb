@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 describe 'email_contacts/index' do
-
   before(:each) do
     assign(
       :email_contacts,

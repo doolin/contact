@@ -28,6 +28,7 @@ class EmailContactsController < ApplicationController
   end
 
   def new
+    ap "#{__FILE__}"
     @email_contact = EmailContact.new
 
     respond_to do |format|

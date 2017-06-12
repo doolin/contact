@@ -25,8 +25,8 @@ Feature: Admin manages emails
     Given I am an authenticated admin
     And I am on the email contacts page
     When I click on the email "Delete" link
-    Then the email is deleted 
- 
+    Then the email is deleted
+
   @v0.2
   Scenario: Admin resends email
     Given I open the email
@@ -39,4 +39,3 @@ Feature: Admin manages emails
     And I click on the forward link
     And I fill in the forwarding email address
     Then the email is forwarded
-  

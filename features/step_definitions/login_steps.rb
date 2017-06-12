@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 # From RSpec book, page 267
@@ -12,7 +11,8 @@ end
 
 # From the Devise wiki:
 Given /^I am not authenticated$/ do
-  visit('/admins/sign_out') # ensure that at least
+  # visit('/admins/sign_out') # ensure that at least
+  visit('/logout') # ensure that at least
 end
 
 Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)" and login "([^\"]*)"$/ do |email, password, login|
