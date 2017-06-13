@@ -21,10 +21,10 @@
       <%= email_contact.email %>
     </td>
     <td>
-      <%= email_contact&.subject&[0..30] %>
+      <%= email_contact&.subject[0..30] %>
     </td>
     <td>
-      <%= email_contact&.message&[0..30] %>
+      <%= email_contact&.message[0..30] %>
     </td>
     <td><%= link_to 'Show', email_contact %></td>
     <!--
