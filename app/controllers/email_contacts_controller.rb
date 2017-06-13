@@ -28,7 +28,6 @@ class EmailContactsController < ApplicationController
   end
 
   def new
-    ap "#{__FILE__}"
     @email_contact = EmailContact.new
 
     respond_to do |format|
@@ -51,13 +50,13 @@ class EmailContactsController < ApplicationController
 
     respond_to do |format|
       if @email_contact.save
-        deliver
-        # format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
-        format.html { redirect_to thankyou_path } # { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
+        # deliver
+# =begin
+        format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
+        #### format.html { redirect_to thankyou_path }
         format.xml  { render xml: @email_contact, status: :created, location: @email_contact }
-
-      # redirect_to thankyou_path
-
+        #### redirect_to thankyou_path
+# =end
       else
         format.html { render action: 'new' }
         format.xml  { render xml: @email_contact.errors, status: :unprocessable_entity }

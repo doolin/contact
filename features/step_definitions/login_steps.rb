@@ -71,7 +71,7 @@ end
 # This is currently failing because there are no emails
 # in the email_contacts list.
 Given /^I click on the email "Delete" link$/ do
-  # save_and_open_page
+  save_and_open_page
   click_link('Delete')
   #  pending # express the regexp above with the code you wish you had
 end

@@ -9,7 +9,7 @@ Feature: Admin manages emails
 
   Scenario: Creating a new account
     Given I am not authenticated
-    When I go to the admin's sign_in page #
+    When I go to the admin's sign_in page
     Then I should see "Forgot your password?"
 
 
@@ -17,10 +17,10 @@ Feature: Admin manages emails
     Given I am on the admin's sign_in page
     When I fill in "Email" with "foo@bar.com"
     And I fill in "Password" with "frobnosticate"
-    When I press "Sign in"
+    When I press "Log in"
     Then I should land on the "Send me an email!" page
 
-  @delete
+  # @delete
   Scenario: Admin deletes an email
     Given I am an authenticated admin
     And I am on the email contacts page

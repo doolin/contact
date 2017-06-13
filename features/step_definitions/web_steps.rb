@@ -25,12 +25,14 @@ require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'support', 'paths'))
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'support', 'selectors'))
 
+=begin
 module WithinHelpers
   def with_scope(locator)
     locator ? within(*selector_for(locator)) { yield } : yield
   end
 end
 World(WithinHelpers)
+=end
 
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
