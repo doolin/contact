@@ -6,7 +6,6 @@ Feature: Admin manages emails
       | Dave | david.doolin@gmail.com | foo     | bar     |
       | Mike | mikefoo@foogmail.com   | bar     | foo     |
 
-
   Scenario: Creating a new account
     Given I am not authenticated
     When I go to the admin's sign_in page

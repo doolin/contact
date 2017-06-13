@@ -7,6 +7,7 @@ Given /^the following email_contacts exist:$/ do |contacts_table|
   contacts_table.hashes.each do |hash|
     EmailContact.create!(hash)
   end
+  # binding.pry
 end
 
 # From the Devise wiki:
@@ -44,12 +45,30 @@ Given /^I am an authenticated admin$/ do
   email = 'testing@man.net'
   login = 'Testing man'
   password = 'secretpass'
+  Admin.new(email: email,
+           password: password,
+           password_confirmation: password).save!
 
-  Given %{I have one admin "#{email}" with password "#{password}" and login "#{login}"}
-  And %{I go to the admin's sign_in page} # And %{I go to login}
-  And %{I fill in "admin_email" with "#{email}"}
-  And %{I fill in "admin_password" with "#{password}"}
-  And %{I press "Sign in"}
+  FactoryGirl.create :email_contact
+
+  @email_contacts = EmailContact.all
+
+
+  visit path_to("the admin's sign_in page")
+
+  # binding.pry
+
+  fill_in("admin_email", with: email)
+  fill_in("admin_password", with: password)
+  click_button("Log in")
+
+  # puts "HERE!!!"
+
+  # Given %{I have one admin "#{email}" with password "#{password}" and login "#{login}"}
+  # And %{I go to the admin's sign_in page} # And %{I go to login}
+  # And %{I fill in "admin_email" with "#{email}"}
+  # And %{I fill in "admin_password" with "#{password}"}
+  # And %{I press "Sign in"}
 end
 
 # This runs, but I don't think it does anything
@@ -71,8 +90,17 @@ end
 # This is currently failing because there are no emails
 # in the email_contacts list.
 Given /^I click on the email "Delete" link$/ do
-  save_and_open_page
-  click_link('Delete')
+  # save_and_open_page
+  # first('Delete').click_link('Delete')
+
+  deletes = all("a", :text => 'Delete')
+
+  deletes.first.click
+
+  # binding.pry
+
+  # click_link('Delete')
+
   #  pending # express the regexp above with the code you wish you had
 end
 
