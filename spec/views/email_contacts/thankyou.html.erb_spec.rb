@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 describe 'email_contacts/thankyou' do
-
   before(:each) do
     assign(:email_contacts, mock_model(EmailContact,
         name: 'Name',

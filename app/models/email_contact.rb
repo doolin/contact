@@ -2,7 +2,7 @@
 
 class EmailContact < ActiveRecord::Base
   # attr_accessible :name, :email, :subject, :message
-  attr_accessor :name, :email, :subject, :message
+  # attr_accessor :name, :email, :subject, :message
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

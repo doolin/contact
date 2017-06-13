@@ -7,6 +7,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
 gem 'email_validator'
+gem 'awesome_print'
 
 gem 'rubocop'
 gem 'bundler-audit'

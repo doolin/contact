@@ -69,11 +69,12 @@ Metrics/PerceivedComplexity:
 
 # Offense count: 2
 # Cop supports --auto-correct.
-# Configuration parameters: EnforcedHashRocketStyle, SupportedHashRocketStyles, EnforcedColonStyle, SupportedColonStyles, EnforcedLastArgumentHashStyle, SupportedLastArgumentHashStyles.
+# Configuration parameters: EnforcedHashRocketStyle, SupportedHashRocketStyles,
+# EnforcedColonStyle, SupportedColonStyles, EnforcedLastArgumentHashStyle, SupportedLastArgumentHashStyles.
 # SupportedHashRocketStyles: key, separator, table
 # SupportedColonStyles: key, separator, table
 # SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
-Style/AlignHash:
+Layout/AlignHash:
   Exclude:
     - 'features/step_definitions/login_steps.rb'
 
@@ -81,7 +82,7 @@ Style/AlignHash:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
 # SupportedStyles: with_first_parameter, with_fixed_indentation
-Style/AlignParameters:
+Layout/AlignParameters:
   Exclude:
     - 'spec/views/email_contacts/new.html.erb_spec.rb'
     - 'spec/views/email_contacts/show.html.erb_spec.rb'
@@ -104,7 +105,7 @@ Style/ClassAndModuleChildren:
 
 # Offense count: 2
 # Cop supports --auto-correct.
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Exclude:
     - 'spec/views/email_contacts/new.html.erb_spec.rb'
     - 'spec/views/email_contacts/show.html.erb_spec.rb'
@@ -115,7 +116,7 @@ Style/Documentation:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Style/EmptyLinesAroundAccessModifier:
+Layout/EmptyLinesAroundAccessModifier:
   Exclude:
     - 'lib/gmail_smtp/lib/smtp_tls.rb'
 
@@ -123,26 +124,21 @@ Style/EmptyLinesAroundAccessModifier:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: empty_lines, no_empty_lines
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Exclude:
     - 'db/schema.rb'
-    - 'spec/controllers/admins_controller_spec.rb'
-    - 'spec/mailers/contact_mailer_spec.rb'
-    - 'spec/routing/email_contacts_routing_spec.rb'
-    - 'spec/views/email_contacts/index.html.erb_spec.rb'
-    - 'spec/views/email_contacts/thankyou.html.erb_spec.rb'
 
 # Offense count: 1
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: native, lf, crlf
-Style/EndOfLine:
+Layout/EndOfLine:
   Exclude:
     - 'lib/gmail_smtp/lib/smtp_tls.rb'
 
 # Offense count: 7
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment, ForceEqualSignAlignment.
-Style/ExtraSpacing:
+Layout/ExtraSpacing:
   Exclude:
     - 'config.ru'
     - 'db/schema.rb'
@@ -160,21 +156,21 @@ Style/HashSyntax:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
 # SupportedStyles: special_inside_parentheses, consistent, align_braces
-Style/IndentHash:
+Layout/IndentHash:
   Exclude:
     - 'lib/gmail_smtp/lib/actionmailer_gmail.rb'
 
 # Offense count: 13
 # Cop supports --auto-correct.
 # Configuration parameters: Width, IgnoredPatterns.
-Style/IndentationWidth:
+Layout/IndentationWidth:
   Exclude:
     - 'lib/gmail_smtp/lib/smtp_tls.rb'
     - 'lib/tasks/cucumber.rake'
 
 # Offense count: 4
 # Cop supports --auto-correct.
-Style/LeadingCommentSpace:
+Layout/LeadingCommentSpace:
   Exclude:
     - 'lib/gmail_smtp/lib/smtp_tls.rb'
 
@@ -195,7 +191,7 @@ Style/MethodCallWithoutArgsParentheses:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   Exclude:
     - 'spec/views/email_contacts/new.html.erb_spec.rb'
     - 'spec/views/email_contacts/show.html.erb_spec.rb'
@@ -204,7 +200,7 @@ Style/MultilineMethodCallBraceLayout:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
 # SupportedStyles: aligned, indented
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Exclude:
     - 'features/support/paths.rb'
     - 'features/support/selectors.rb'
@@ -259,7 +255,7 @@ Style/RegexpLiteral:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Style/SpaceAfterComma:
+Layout/SpaceAfterComma:
   Exclude:
     - 'features/step_definitions/web_steps.rb'
 
@@ -267,7 +263,7 @@ Style/SpaceAfterComma:
 # Cop supports --auto-correct.
 # Configuration parameters: SupportedStyles.
 # SupportedStyles: space, no_space
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
 
 # Offense count: 3
@@ -281,7 +277,7 @@ Style/StringLiterals:
 
 # Offense count: 59
 # Cop supports --auto-correct.
-Style/Tab:
+Layout/Tab:
   Exclude:
     - 'lib/gmail_smtp/lib/actionmailer_gmail.rb'
     - 'lib/gmail_smtp/lib/smtp_tls.rb'
