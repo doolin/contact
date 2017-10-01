@@ -28,4 +28,5 @@ group :test do
   gem 'email_spec'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'simplecov'
 end
