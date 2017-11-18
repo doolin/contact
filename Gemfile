@@ -26,7 +26,7 @@ group :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'email_spec'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'launchy'
   gem 'simplecov'
 end
