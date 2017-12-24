@@ -5,7 +5,7 @@ class EmailContactsController < ApplicationController
     if admin_signed_in?
       @email_contacts = EmailContact.all
       respond_to do |format|
-        format.html # index.html.erb
+        format.html
         format.xml  { render xml: @email_contacts }
       end
     else
@@ -50,13 +50,9 @@ class EmailContactsController < ApplicationController
 
     respond_to do |format|
       if @email_contact.save
-        # deliver
-# =begin
+        deliver
         format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
-        #### format.html { redirect_to thankyou_path }
         format.xml  { render xml: @email_contact, status: :created, location: @email_contact }
-        #### redirect_to thankyou_path
-# =end
       else
         format.html { render action: 'new' }
         format.xml  { render xml: @email_contact.errors, status: :unprocessable_entity }
@@ -68,7 +64,6 @@ class EmailContactsController < ApplicationController
     @email_contact = EmailContact.find(params[:id])
 
     respond_to do |format|
-      # if @email_contact.update_attributes(params[:email_contact])
       if @email_contact.update_attributes(permitted_params)
         format.html { redirect_to(@email_contact, notice: 'Email contact was successfully updated.') }
         format.xml  { head :ok }
