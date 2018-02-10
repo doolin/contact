@@ -9,13 +9,14 @@ gem 'dynamic_form'
 gem 'email_validator'
 gem 'awesome_print'
 
-gem 'rubocop'
 gem 'bundler-audit'
 gem 'brakeman'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-nav'
+  gem 'rubocop'
+  gem 'mry'
 end
 
 group :test do

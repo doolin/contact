@@ -6,7 +6,7 @@ class EmailContactsController < ApplicationController
       @email_contacts = EmailContact.all
       respond_to do |format|
         format.html
-        format.xml  { render xml: @email_contacts }
+        format.xml { render xml: @email_contacts }
       end
     else
       redirect_to root_path
@@ -51,7 +51,7 @@ class EmailContactsController < ApplicationController
     respond_to do |format|
       if @email_contact.save
         deliver
-        format.html { redirect_to(thankyou_path, :notice => 'Email contact was successfully created.') }
+        format.html { redirect_to(thankyou_path, notice: 'Email contact was successfully created.') }
         format.xml  { render xml: @email_contact, status: :created, location: @email_contact }
       else
         format.html { render action: 'new' }

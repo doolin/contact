@@ -19,7 +19,6 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # end
 
 RSpec.configure do |config|
-
   config.include FactoryBot::Syntax::Methods
 
   config.mock_with :rspec

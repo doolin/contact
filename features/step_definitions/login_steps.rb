@@ -22,9 +22,9 @@ Given /^I am an authenticated admin$/ do
   @email_contacts = EmailContact.all
 
   visit path_to("the admin's sign_in page")
-  fill_in("admin_email", with: email)
-  fill_in("admin_password", with: password)
-  click_button("Log in")
+  fill_in('admin_email', with: email)
+  fill_in('admin_password', with: password)
+  click_button('Log in')
 end
 
 Then /^I should land on the "Send me an email!" page$/ do
@@ -32,7 +32,7 @@ Then /^I should land on the "Send me an email!" page$/ do
 end
 
 Given /^I click on the email "Delete" link$/ do
-  deletes = all("a", :text => 'Delete')
+  deletes = all('a', text: 'Delete')
   deletes.first.click
 end
 
