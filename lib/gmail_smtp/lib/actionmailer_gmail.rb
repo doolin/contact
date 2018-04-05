@@ -6,5 +6,5 @@ ActionMailer::Base.smtp_settings = {
 	:authentication => :plain,
 	:domain => ENV['GMAIL_SMTP_USER'],
 	:user_name => ENV['GMAIL_SMTP_USER'],
-	:password => ENV['GMAIL_SMTP_PASSWORD'],
+	:password => ENV['GMAIL_SMTP_PASSWORD']
 }
