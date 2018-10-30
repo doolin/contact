@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.0'
+gem 'rails', '5.2.1'
 gem 'sqlite3'
 gem 'devise'
 gem 'dynamic_form'
