@@ -8,6 +8,8 @@ doc/api
 doc/app
 *.swp
 *~
+*.bak
+
 coverage.data
 .DS_Store
 todo*
