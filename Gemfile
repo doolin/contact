@@ -2,8 +2,8 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 7.2.0'
-gem 'sqlite3', '~> 1.4'
+gem 'rails', '~> 8.0.0'
+gem 'sqlite3', '~> 2.1'
 gem 'devise', '~> 4.9'
 gem 'dynamic_form'
 gem 'email_validator'
