@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 8.1.0'
 gem 'sqlite3', '~> 2.1'
-gem 'devise', '~> 4.9'
+gem 'devise', '~> 5.0'
 gem 'dynamic_form'
 gem 'email_validator'
 gem 'awesome_print'
