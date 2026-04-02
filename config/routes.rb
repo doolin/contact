@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-Contact::Application.routes.draw do
-  # This route is for eliminating the default devise sign up
+Rails.application.routes.draw do
   devise_for :admins
-  # devise_for :admins, controllers: { registrations: 'admin/registrations' }
 
   resources :email_contacts
   get '/thankyou', to: 'email_contacts#thankyou'

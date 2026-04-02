@@ -64,7 +64,7 @@ class EmailContactsController < ApplicationController
     @email_contact = EmailContact.find(params[:id])
 
     respond_to do |format|
-      if @email_contact.update_attributes(permitted_params)
+      if @email_contact.update(permitted_params)
         format.html { redirect_to(@email_contact, notice: 'Email contact was successfully updated.') }
         format.xml  { head :ok }
       else

@@ -2,12 +2,13 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.3'
-gem 'sqlite3'
-gem 'devise'
+gem 'rails', '~> 7.0.0'
+gem 'sqlite3', '~> 1.4'
+gem 'devise', '~> 4.9'
 gem 'dynamic_form'
 gem 'email_validator'
 gem 'awesome_print'
+gem 'sprockets-rails'
 
 gem 'bundler-audit'
 gem 'brakeman'
@@ -19,16 +20,13 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  gem 'mry'
 end
 
 group :test do
   gem 'rspec-activemodel-mocks' # TODO: get rid of this
   gem 'database_cleaner'
-  gem 'cucumber'
-  gem 'cucumber-rails', require: false
   gem 'capybara'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 6.0'
   gem 'email_spec'
   gem 'factory_bot_rails'
   gem 'launchy'
