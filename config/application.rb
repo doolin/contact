@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Contact
   class Application < Rails::Application
-    config.load_defaults 8.0
+    config.load_defaults 8.1
 
     # Use a dummy secret_key_base for dev/test; production uses ENV.
     config.secret_key_base = ENV.fetch('SECRET_KEY_BASE') {
