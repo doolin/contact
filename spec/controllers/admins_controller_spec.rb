@@ -6,16 +6,17 @@ describe AdminsController do
   include Devise::Test::ControllerHelpers
   render_views
 
-  before(:each) do
-    @admin = Admin.create(password: '13')
-    sign_in(@admin, scope: :admin)
-  end
+  describe '#new' do
+    context 'when signed in' do
+      before(:each) do
+        @admin = Admin.create(email: 'admin@test.com', password: 'foobarski')
+        sign_in(@admin, scope: :admin)
+      end
 
-  describe '#sign_in' do
-    xexample 'successfully' do
-      # get '/login'
-      get login_url
-      response.should be_success
+      it 'responds successfully' do
+        get :new
+        expect(response).to have_http_status(:ok)
+      end
     end
   end
 end

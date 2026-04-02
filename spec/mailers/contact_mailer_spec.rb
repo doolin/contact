@@ -7,20 +7,59 @@ describe ContactMailer do
     @email_contact = create(:email_contact)
   end
 
-  describe 'contact_mailer' do
+  describe '#daves_copy' do
     let(:mail) { ContactMailer.daves_copy(@email_contact) }
 
-    it 'renders the headers' do
+    it 'sends to the correct recipient' do
       expect(mail.to).to eq ['david.doolin@gmail.com']
+    end
 
-      # The from field is overridden by Google, let's
-      # test it here so that it will work when outgoing
-      # SMTP server is changed to something else.
-      # mail.from.should eq([@email_contact.email])
+    it 'sets the from address to the contact email' do
+      expect(mail.from).to eq [@email_contact.email]
+    end
+
+    it 'includes the subject in the email subject line' do
+      expect(mail.subject).to eq "ContactMe email: #{@email_contact.subject}"
     end
 
     it 'renders the body' do
       expect(mail.body.encoded).to match 'The test message'
+    end
+  end
+
+  describe '#contacts_copy' do
+    let(:mail) { ContactMailer.contacts_copy(@email_contact) }
+
+    it 'sends to the contact email address' do
+      expect(mail.to).to eq [@email_contact.email]
+    end
+
+    it 'sets the from address to dave' do
+      expect(mail.from).to eq ['david.doolin@gmail.com']
+    end
+
+    it 'includes Copy: prefix in the subject' do
+      expect(mail.subject).to eq "Copy: #{@email_contact.subject}"
+    end
+  end
+
+  describe '#welcome_email' do
+    let(:mail) { ContactMailer.welcome_email(@email_contact) }
+
+    it 'sets from to the contact email' do
+      expect(mail.from).to eq [@email_contact.email]
+    end
+
+    it 'CCs the contact email' do
+      expect(mail.cc).to eq [@email_contact.email]
+    end
+
+    it 'sets reply_to to the contact email' do
+      expect(mail.reply_to).to eq [@email_contact.email]
+    end
+
+    it 'includes the email in the subject line' do
+      expect(mail.subject).to eq "Email from #{@email_contact.email}"
     end
   end
 end
