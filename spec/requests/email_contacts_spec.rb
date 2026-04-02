@@ -41,7 +41,7 @@ describe 'EmailContacts' do
 
     it 'does not create a contact with invalid params' do
       expect do
-        post email_contacts_path, params: { email_contact: { name: '' } }
+        post email_contacts_path, params: { email_contact: { name: '', email: '', subject: '', message: '' } }
       end.not_to change(EmailContact, :count)
     end
   end

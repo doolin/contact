@@ -26,6 +26,7 @@ group :test do
   gem 'rspec-activemodel-mocks' # TODO: get rid of this
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 6.0'
   gem 'email_spec'
   gem 'factory_bot_rails'
