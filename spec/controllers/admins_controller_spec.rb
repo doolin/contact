@@ -4,18 +4,8 @@ require 'spec_helper.rb'
 
 describe AdminsController do
   include Devise::Test::ControllerHelpers
-  render_views
 
-  before(:each) do
-    @admin = Admin.create(password: '13')
-    sign_in(@admin, scope: :admin)
-  end
-
-  describe '#sign_in' do
-    xexample 'successfully' do
-      # get '/login'
-      get login_url
-      response.should be_success
-    end
-  end
+  # AdminsController has no resourceful routes defined,
+  # so we cannot test it via controller specs.
+  # The #new action exists but is not routable.
 end

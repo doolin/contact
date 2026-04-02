@@ -2,7 +2,6 @@
 
 class RegistrationsController < Devise::RegistrationsController
   def new
-    ap '#__FILE__}'
     # redirect_to root_path
   end
 

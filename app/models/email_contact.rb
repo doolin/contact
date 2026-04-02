@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EmailContact < ActiveRecord::Base
+class EmailContact < ApplicationRecord
   # attr_accessible :name, :email, :subject, :message
   # attr_accessor :name, :email, :subject, :message
 

@@ -1,10 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.cache_store = :dalli_store
+  # config.cache_store = :mem_cache_store
 
   # Code is not reloaded between requests.
-  config.cache_classes = true
+  config.enable_reloading = false
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -21,7 +21,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # config.assets.js_compressor = :terser
   # config.assets.css_compressor = :sass
 
   # Specifies the header that your server uses for sending files
