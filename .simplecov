@@ -3,10 +3,8 @@
 SimpleCov.start 'rails' do
   enable_coverage :branch
 
-  # Scope C: active runtime paths in app code only.
+  # Iteration 2: include all app controllers/models/mailers.
   track_files 'app/{controllers,mailers,models}/**/*.rb'
-  add_filter '/app/controllers/admins_controller.rb'
-  add_filter '/app/controllers/registrations_controller.rb'
 
   add_group 'Controllers', 'app/controllers'
   add_group 'Models', 'app/models'
