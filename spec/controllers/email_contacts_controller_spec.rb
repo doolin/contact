@@ -5,14 +5,6 @@ require 'spec_helper'
 describe EmailContactsController do
   include Devise::Test::ControllerHelpers
 
-  def mock_email_contact(stubs={})
-    (@mock_email_contact ||= mock_model(EmailContact).as_null_object).tap do |email_contact|
-      stubs.each do |k, v|
-        allow(email_contact).to receive(k).and_return(v)
-      end
-    end
-  end
-
   let(:valid_attrs) do
     {
       name: 'verena',
@@ -109,7 +101,7 @@ describe EmailContactsController do
       end
     end
 
-    describe '.create' do
+    describe 'POST #create' do
       context 'with valid params' do
         it 'creates EmailContact and redirects to Thank You' do
           allow(controller).to receive(:deliver)
@@ -139,7 +131,7 @@ describe EmailContactsController do
       end
     end
 
-    describe '.update' do
+    describe 'PUT #update' do
       let(:contact) { EmailContact.create!(valid_attrs) }
 
       context 'with valid params' do

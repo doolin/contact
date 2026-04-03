@@ -10,7 +10,7 @@ describe 'EmailContacts' do
     end
   end
 
-  describe 'GET /email_contacts/new (root)' do
+  describe 'GET / (root_path)' do
     it 'renders the new contact form' do
       get root_path
       expect(response).to have_http_status(:ok)

@@ -3,9 +3,9 @@
 require 'spec_helper.rb'
 
 describe AdminsController do
-  include Devise::Test::ControllerHelpers
-
-  # AdminsController has no resourceful routes defined,
-  # so we cannot test it via controller specs.
-  # The #new action exists but is not routable.
+  describe 'routing' do
+    it 'does not route GET /admins/new' do
+      expect(get: '/admins/new').not_to be_routable
+    end
+  end
 end
