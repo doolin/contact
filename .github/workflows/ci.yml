@@ -51,3 +51,10 @@ jobs:
           bundler-cache: true
       - run: bundle exec rails db:setup RAILS_ENV=test
       - run: bundle exec rspec
+      - name: Upload coverage artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-rspec
+          path: coverage/
+          if-no-files-found: ignore

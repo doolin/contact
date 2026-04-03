@@ -25,6 +25,11 @@ describe ContactMailer do
     it 'renders the body' do
       expect(mail.body.encoded).to match 'The test message'
     end
+
+    it 'renders both html and text parts' do
+      expect(mail.html_part.body.encoded).to include(@email_contact.message)
+      expect(mail.text_part.body.encoded).to include(@email_contact.message)
+    end
   end
 
   describe '#contacts_copy' do
@@ -40,6 +45,11 @@ describe ContactMailer do
 
     it 'includes Copy: prefix in the subject' do
       expect(mail.subject).to eq "Copy: #{@email_contact.subject}"
+    end
+
+    it 'renders both html and text parts' do
+      expect(mail.html_part.body.encoded).to include(@email_contact.name)
+      expect(mail.text_part.body.encoded).to include(@email_contact.name)
     end
   end
 
@@ -60,6 +70,11 @@ describe ContactMailer do
 
     it 'includes the email in the subject line' do
       expect(mail.subject).to eq "Email from #{@email_contact.email}"
+    end
+
+    it 'renders both html and text parts' do
+      expect(mail.html_part.body.encoded).to include(@email_contact.message)
+      expect(mail.text_part.body.encoded).to include(@email_contact.message)
     end
   end
 end

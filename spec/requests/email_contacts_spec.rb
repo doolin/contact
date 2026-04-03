@@ -3,6 +3,15 @@
 require 'spec_helper'
 
 describe 'EmailContacts' do
+  let(:valid_attrs) do
+    {
+      name: 'Test User',
+      email: 'test@example.com',
+      subject: 'Test Subject',
+      message: 'Test message body'
+    }
+  end
+
   describe 'GET /email_contacts' do
     it 'redirects unauthenticated users to root' do
       get email_contacts_path
@@ -25,17 +34,22 @@ describe 'EmailContacts' do
   end
 
   describe 'POST /email_contacts' do
+    before do
+      ActionMailer::Base.deliveries.clear
+    end
+
     it 'creates a new contact with valid params' do
       allow_any_instance_of(EmailContactsController).to receive(:deliver)
-      attrs = {
-        name: 'Test User',
-        email: 'test@example.com',
-        subject: 'Test Subject',
-        message: 'Test message body'
-      }
       expect do
-        post email_contacts_path, params: { email_contact: attrs }
+        post email_contacts_path, params: { email_contact: valid_attrs }
       end.to change(EmailContact, :count).by(1)
+      expect(response).to redirect_to(thankyou_path)
+    end
+
+    it 'delivers both contact emails when save succeeds' do
+      expect do
+        post email_contacts_path, params: { email_contact: valid_attrs }
+      end.to change(ActionMailer::Base.deliveries, :count).by(2)
       expect(response).to redirect_to(thankyou_path)
     end
 
@@ -43,6 +57,12 @@ describe 'EmailContacts' do
       expect do
         post email_contacts_path, params: { email_contact: { name: '', email: '', subject: '', message: '' } }
       end.not_to change(EmailContact, :count)
+    end
+
+    it 'returns unprocessable_content for invalid xml requests' do
+      post "#{email_contacts_path}.xml",
+           params: { email_contact: { name: '', email: '', subject: '', message: '' } }
+      expect(response).to have_http_status(:unprocessable_content)
     end
   end
 end
