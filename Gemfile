@@ -33,4 +33,4 @@ group :test do
   gem 'launchy'
   gem 'simplecov'
 end
-gem "ostruct"
+gem 'ostruct'
